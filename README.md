@@ -1,7 +1,11 @@
 Original App Design Project - README Template
 ===
 
+
+# Spotify Clone
+
 # spotify collab
+
 
 ## Table of Contents
 1. [Overview](#Overview)
