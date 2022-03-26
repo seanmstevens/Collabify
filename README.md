@@ -25,13 +25,21 @@ A 'shared playlists' app where a user can make collaborative playlists with thei
 
 **Required Must-have Stories**
 
-* [fill in your required user stories here]
-* ...
+* User sees custom app icon in home screen. 
+* User sees a styled launch screen when opening the app.
+* User can log in using a spoitfy account.
+* User can log out.
+* User stays logged in across restarts.
+* User sees can create playlist. 
+* User can add friends to playlist.
+* User can see playlist detail (songs pending approvoal, members of playlist).   
+* User can approve/decline a song on a pending state in the playlist.
 
 **Optional Nice-to-have Stories**
 
-* [fill in your required user stories here]
-* ...
+* User can play songs with a custom music player
+* Users accors different app can listen to the same music together
+* User can chat with members inside the app. 
 
 ### 2. Screen Archetypes
 
