@@ -1,11 +1,5 @@
-Original App Design Project - README Template
-===
 
-
-# Spotify Clone
-
-# spotify collab
-
+# Collaborative Playlist
 
 ## Table of Contents
 1. [Overview](#Overview)
@@ -15,16 +9,15 @@ Original App Design Project - README Template
 
 ## Overview
 ### Description
-[Description of your app]
+A 'shared playlists' app where a user can make collaborative playlists with their peers. The main feature is that everyone in the group has to approve an incoming song request, only then it will be added to the playlist. This ensures only those songs get added to the playlist which are approved, or 'liked', by everyone.
 
 ### App Evaluation
-[Evaluation of your app across the following attributes]
-- **Category:**
-- **Mobile:**
-- **Story:**
-- **Market:**
-- **Habit:**
-- **Scope:**
+- **Category:** Social Networking / Music
+- **Mobile:** This app is focused primarily for mobiles. Such a concept can be extended for a web application as well, but, users would prefer the mobile version more than it's web application.  
+- **Story:** User invites and makes a group of friends, creating a common playlist. Anytime a user enters a song, all of the group has to approve it for it to be added to the playlist.  
+- **Market:** An individual belonging to any age group who has an affinity to music and discovering new songs! 
+- **Habit:** This app could be used as often or unoften as the user wanted. 
+- **Scope:** The scope could be increased to playing music on the app, suggesting new music based on the group's playlist. 
 
 ## Product Spec
 
