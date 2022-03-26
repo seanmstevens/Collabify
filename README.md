@@ -46,18 +46,18 @@ A 'shared playlists' app where a user can make collaborative playlists with thei
 
 **Tab Navigation** (Tab to Screen)
 
-* [fill out your first tab]
-* [fill out your second tab]
-* [fill out your third tab]
+* **Global Feed:** This is where all playlists created by all users of the app will be diplayed in a table view or collection view.
+* **User Feed:** This tab will filter the playlists to only those created or contributed to by the authenticated user. Since the playlists in this tab will be part-owned by the user, they will be editable.
+* **Settings:** General user profile settings. Enables the user to set their display name, change their password, and edit their profile picture, among other options.
 
 **Flow Navigation** (Screen to Screen)
 
-* [list first screen here]
-   * [list screen navigation here]
-   * ...
-* [list second screen here]
-   * [list screen navigation here]
-   * ...
+* **Global Feed:** A collection view of playlists with basic information displayed.
+   * **Playlist Detail View:** In this view, details about the particular playlist selected in the collection view will be displayed to the user. Information such as the contributors to the playlist, the songs (including artist), total length of the playlist, and a custom playlist image will be shown.
+   * **Player View:** When a user hits the play button on a playlist, it will bring them to a player view that will automatically start the playlist from the beginning track.
+* **User Feed:** Another collection view of playlists, filtered to those playlists that the authenticated user owns.
+   * **Playlist Detail View:** Similar to the detail view associated with the global feed, this view will show details about each playlist, and will include additional contextual controls for editing the playlist details.
+   * **Edit View:** When a user selects the "edit" button, they will be presented with a modal interface where they can change the playlist information including title, custom image, in addition to adding, removing, and reordering the tracks in the playlist.
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
