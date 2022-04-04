@@ -72,17 +72,186 @@ A 'shared playlists' app where a user can make collaborative playlists with thei
    * **Edit View:** When a user selects the "edit" button, they will be presented with a modal interface where they can change the playlist information including title, custom image, in addition to adding, removing, and reordering the tracks in the playlist.
 
 ## Wireframes
-[Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+Figma Wireframes/mockups: https://www.figma.com/file/MvkJd9Yeq0w9gZkvZw5FQe/Spotify-Colab?node-id=0%3A1
 
 ### [BONUS] Digital Wireframes & Mockups
 
 ### [BONUS] Interactive Prototype
 
 ## Schema 
-[This section will be completed in Unit 9]
+
 ### Models
-[Add table of models]
+
+#### Playlist
+
+<table>
+  <tr>
+   <td><strong>Property</strong>
+   </td>
+   <td><strong>Type</strong>
+   </td>
+   <td><strong>Description</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>objectId
+   </td>
+   <td>String
+   </td>
+   <td>unique ID for the playlist (default field)
+   </td>
+  </tr>
+  <tr>
+   <td>name
+   </td>
+   <td>String
+   </td>
+   <td>the plain text name of the playlist
+   </td>
+  </tr>
+  <tr>
+   <td>authors
+   </td>
+   <td>[Pointer to User]
+   </td>
+   <td>an array of pointers to Users that are collaborators on the playlist.
+   </td>
+  </tr>
+  <tr>
+   <td>image
+   </td>
+   <td>File
+   </td>
+   <td>the custom image used for the playlist
+   </td>
+  </tr>
+  <tr>
+   <td>tracks
+   </td>
+   <td>[Pointer to Song]
+   </td>
+   <td>an array of pointers to Song objects that make up the items of the playlist
+   </td>
+  </tr>
+  <tr>
+   <td>spotifyId
+   </td>
+   <td>String
+   </td>
+   <td>unique Spotify ID for the playlist. Will be null until the playlist is created via the Spotify API.
+   </td>
+  </tr>
+  <tr>
+   <td>isUnderVote
+   </td>
+   <td>Boolean
+   </td>
+   <td>indicates if the playlist is being voted on for publication to Spotify API
+   </td>
+  </tr>
+  <tr>
+   <td>voteCount
+   </td>
+   <td>Number
+   </td>
+   <td>the number of votes the playlist has received for publication
+   </td>
+  </tr>
+  <tr>
+   <td>votesToSucceed
+   </td>
+   <td>Number
+   </td>
+   <td>the number of affirmative votes the playlist must receive to be published to the Spotify API. Serves as a snapshot of the voting user count when a vote is initiated.
+   </td>
+  </tr>
+  <tr>
+   <td>createdAt
+   </td>
+   <td>DateTime
+   </td>
+   <td>date when the playlist is created (default field)
+   </td>
+  </tr>
+  <tr>
+   <td>updatedAt
+   </td>
+   <td>DateTime
+   </td>
+   <td>date when the playlist is updated (default field)
+   </td>
+  </tr>
+</table>
+
+#### Song
+
+<table>
+  <tr>
+   <td><strong>Property</strong>
+   </td>
+   <td><strong>Type</strong>
+   </td>
+   <td><strong>Description</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>objectId
+   </td>
+   <td>String
+   </td>
+   <td>unique ID for the playlist (default field)
+   </td>
+  </tr>
+  <tr>
+   <td>title
+   </td>
+   <td>String
+   </td>
+   <td>the title of the song
+   </td>
+  </tr>
+  <tr>
+   <td>artist
+   </td>
+   <td>String
+   </td>
+   <td>the name of the artist(s) that are listed on the song
+   </td>
+  </tr>
+  <tr>
+   <td>album
+   </td>
+   <td>String
+   </td>
+   <td>the name of the album to which the song belongs
+   </td>
+  </tr>
+  <tr>
+   <td>duration
+   </td>
+   <td>Number
+   </td>
+   <td>the duration of the song, in seconds
+   </td>
+  </tr>
+  <tr>
+   <td>spotifyId
+   </td>
+   <td>String
+   </td>
+   <td>unique Spotify ID for the song.
+   </td>
+  </tr>
+  <tr>
+   <td>imageUrl
+   </td>
+   <td>String
+   </td>
+   <td>the Spotify-hosted image url for the song item
+   </td>
+  </tr>
+</table>
+
 ### Networking
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
