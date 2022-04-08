@@ -1,0 +1,790 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A225DC8054B1D3C08926827 /* Pods_Spotify_Collab_Playlist_App_Spotify_Collab_Playlist_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0629736841AF72ADB2C49390 /* Pods_Spotify_Collab_Playlist_App_Spotify_Collab_Playlist_AppUITests.framework */; };
+		271E9B1EEAC53F9B03BF906A /* Pods_Spotify_Collab_Playlist_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4784E5B005F506696288CEAF /* Pods_Spotify_Collab_Playlist_App.framework */; };
+		571EC80927FFFCBC00CC0F31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571EC80827FFFCBC00CC0F31 /* AppDelegate.swift */; };
+		571EC80B27FFFCBC00CC0F31 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571EC80A27FFFCBC00CC0F31 /* SceneDelegate.swift */; };
+		571EC81027FFFCBC00CC0F31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 571EC80E27FFFCBC00CC0F31 /* Main.storyboard */; };
+		571EC81227FFFCBD00CC0F31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 571EC81127FFFCBD00CC0F31 /* Assets.xcassets */; };
+		571EC81527FFFCBD00CC0F31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 571EC81327FFFCBD00CC0F31 /* LaunchScreen.storyboard */; };
+		571EC82027FFFCBE00CC0F31 /* Spotify_Collab_Playlist_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571EC81F27FFFCBE00CC0F31 /* Spotify_Collab_Playlist_AppTests.swift */; };
+		571EC82A27FFFCBE00CC0F31 /* Spotify_Collab_Playlist_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571EC82927FFFCBE00CC0F31 /* Spotify_Collab_Playlist_AppUITests.swift */; };
+		571EC82C27FFFCBE00CC0F31 /* Spotify_Collab_Playlist_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571EC82B27FFFCBE00CC0F31 /* Spotify_Collab_Playlist_AppUITestsLaunchTests.swift */; };
+		9762A13D27B8E07263015B18 /* Pods_Spotify_Collab_Playlist_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748AB03A5705FD27108A8BC9 /* Pods_Spotify_Collab_Playlist_AppTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		571EC81C27FFFCBE00CC0F31 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 571EC7FD27FFFCBB00CC0F31 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 571EC80427FFFCBB00CC0F31;
+			remoteInfo = "Spotify-Collab-Playlist-App";
+		};
+		571EC82627FFFCBE00CC0F31 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 571EC7FD27FFFCBB00CC0F31 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 571EC80427FFFCBB00CC0F31;
+			remoteInfo = "Spotify-Collab-Playlist-App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0629736841AF72ADB2C49390 /* Pods_Spotify_Collab_Playlist_App_Spotify_Collab_Playlist_AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spotify_Collab_Playlist_App_Spotify_Collab_Playlist_AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		111E4DC20436D1E13416065F /* Pods-Spotify-Collab-Playlist-App-Spotify-Collab-Playlist-AppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spotify-Collab-Playlist-App-Spotify-Collab-Playlist-AppUITests.debug.xcconfig"; path = "Target Support Files/Pods-Spotify-Collab-Playlist-App-Spotify-Collab-Playlist-AppUITests/Pods-Spotify-Collab-Playlist-App-Spotify-Collab-Playlist-AppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		415740B380D6AE1236EE3955 /* Pods-Spotify-Collab-Playlist-App-Spotify-Collab-Playlist-AppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spotify-Collab-Playlist-App-Spotify-Collab-Playlist-AppUITests.release.xcconfig"; path = "Target Support Files/Pods-Spotify-Collab-Playlist-App-Spotify-Collab-Playlist-AppUITests/Pods-Spotify-Collab-Playlist-App-Spotify-Collab-Playlist-AppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4784E5B005F506696288CEAF /* Pods_Spotify_Collab_Playlist_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spotify_Collab_Playlist_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		571EC80527FFFCBC00CC0F31 /* Spotify-Collab-Playlist-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Spotify-Collab-Playlist-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		571EC80827FFFCBC00CC0F31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		571EC80A27FFFCBC00CC0F31 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		571EC80F27FFFCBC00CC0F31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		571EC81127FFFCBD00CC0F31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		571EC81427FFFCBD00CC0F31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		571EC81627FFFCBD00CC0F31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		571EC81B27FFFCBE00CC0F31 /* Spotify-Collab-Playlist-AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Spotify-Collab-Playlist-AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		571EC81F27FFFCBE00CC0F31 /* Spotify_Collab_Playlist_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spotify_Collab_Playlist_AppTests.swift; sourceTree = "<group>"; };
+		571EC82527FFFCBE00CC0F31 /* Spotify-Collab-Playlist-AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Spotify-Collab-Playlist-AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		571EC82927FFFCBE00CC0F31 /* Spotify_Collab_Playlist_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spotify_Collab_Playlist_AppUITests.swift; sourceTree = "<group>"; };
+		571EC82B27FFFCBE00CC0F31 /* Spotify_Collab_Playlist_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spotify_Collab_Playlist_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		59CB026F2C59406F47E4BD6A /* Pods-Spotify-Collab-Playlist-AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spotify-Collab-Playlist-AppTests.release.xcconfig"; path = "Target Support Files/Pods-Spotify-Collab-Playlist-AppTests/Pods-Spotify-Collab-Playlist-AppTests.release.xcconfig"; sourceTree = "<group>"; };
+		684999B03FB9E44D427D5A6C /* Pods-Spotify-Collab-Playlist-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spotify-Collab-Playlist-App.debug.xcconfig"; path = "Target Support Files/Pods-Spotify-Collab-Playlist-App/Pods-Spotify-Collab-Playlist-App.debug.xcconfig"; sourceTree = "<group>"; };
+		748AB03A5705FD27108A8BC9 /* Pods_Spotify_Collab_Playlist_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spotify_Collab_Playlist_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		894193B609B01AC8A314465D /* Pods-Spotify-Collab-Playlist-AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spotify-Collab-Playlist-AppTests.debug.xcconfig"; path = "Target Support Files/Pods-Spotify-Collab-Playlist-AppTests/Pods-Spotify-Collab-Playlist-AppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D9F650853734F703AD64B92D /* Pods-Spotify-Collab-Playlist-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spotify-Collab-Playlist-App.release.xcconfig"; path = "Target Support Files/Pods-Spotify-Collab-Playlist-App/Pods-Spotify-Collab-Playlist-App.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		571EC80227FFFCBB00CC0F31 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				271E9B1EEAC53F9B03BF906A /* Pods_Spotify_Collab_Playlist_App.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		571EC81827FFFCBE00CC0F31 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9762A13D27B8E07263015B18 /* Pods_Spotify_Collab_Playlist_AppTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		571EC82227FFFCBE00CC0F31 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A225DC8054B1D3C08926827 /* Pods_Spotify_Collab_Playlist_App_Spotify_Collab_Playlist_AppUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1D13A82F814EE35D5F3FFE64 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4784E5B005F506696288CEAF /* Pods_Spotify_Collab_Playlist_App.framework */,
+				0629736841AF72ADB2C49390 /* Pods_Spotify_Collab_Playlist_App_Spotify_Collab_Playlist_AppUITests.framework */,
+				748AB03A5705FD27108A8BC9 /* Pods_Spotify_Collab_Playlist_AppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		571EC7FC27FFFCBB00CC0F31 = {
+			isa = PBXGroup;
+			children = (
+				571EC80727FFFCBC00CC0F31 /* Spotify-Collab-Playlist-App */,
+				571EC81E27FFFCBE00CC0F31 /* Spotify-Collab-Playlist-AppTests */,
+				571EC82827FFFCBE00CC0F31 /* Spotify-Collab-Playlist-AppUITests */,
+				571EC80627FFFCBC00CC0F31 /* Products */,
+				62B85CAE915EABA04F949A4E /* Pods */,
+				1D13A82F814EE35D5F3FFE64 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		571EC80627FFFCBC00CC0F31 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				571EC80527FFFCBC00CC0F31 /* Spotify-Collab-Playlist-App.app */,
+				571EC81B27FFFCBE00CC0F31 /* Spotify-Collab-Playlist-AppTests.xctest */,
+				571EC82527FFFCBE00CC0F31 /* Spotify-Collab-Playlist-AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		571EC80727FFFCBC00CC0F31 /* Spotify-Collab-Playlist-App */ = {
+			isa = PBXGroup;
+			children = (
+				571EC83B27FFFCED00CC0F31 /* Utilities */,
+				571EC83A27FFFCE500CC0F31 /* Networking */,
+				571EC83927FFFCDD00CC0F31 /* Controllers */,
+				571EC83827FFFCD600CC0F31 /* Models */,
+				571EC80827FFFCBC00CC0F31 /* AppDelegate.swift */,
+				571EC80A27FFFCBC00CC0F31 /* SceneDelegate.swift */,
+				571EC80E27FFFCBC00CC0F31 /* Main.storyboard */,
+				571EC81127FFFCBD00CC0F31 /* Assets.xcassets */,
+				571EC81327FFFCBD00CC0F31 /* LaunchScreen.storyboard */,
+				571EC81627FFFCBD00CC0F31 /* Info.plist */,
+			);
+			path = "Spotify-Collab-Playlist-App";
+			sourceTree = "<group>";
+		};
+		571EC81E27FFFCBE00CC0F31 /* Spotify-Collab-Playlist-AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				571EC81F27FFFCBE00CC0F31 /* Spotify_Collab_Playlist_AppTests.swift */,
+			);
+			path = "Spotify-Collab-Playlist-AppTests";
+			sourceTree = "<group>";
+		};
+		571EC82827FFFCBE00CC0F31 /* Spotify-Collab-Playlist-AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				571EC82927FFFCBE00CC0F31 /* Spotify_Collab_Playlist_AppUITests.swift */,
+				571EC82B27FFFCBE00CC0F31 /* Spotify_Collab_Playlist_AppUITestsLaunchTests.swift */,
+			);
+			path = "Spotify-Collab-Playlist-AppUITests";
+			sourceTree = "<group>";
+		};
+		571EC83827FFFCD600CC0F31 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		571EC83927FFFCDD00CC0F31 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		571EC83A27FFFCE500CC0F31 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		571EC83B27FFFCED00CC0F31 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		62B85CAE915EABA04F949A4E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				684999B03FB9E44D427D5A6C /* Pods-Spotify-Collab-Playlist-App.debug.xcconfig */,
+				D9F650853734F703AD64B92D /* Pods-Spotify-Collab-Playlist-App.release.xcconfig */,
+				111E4DC20436D1E13416065F /* Pods-Spotify-Collab-Playlist-App-Spotify-Collab-Playlist-AppUITests.debug.xcconfig */,
+				415740B380D6AE1236EE3955 /* Pods-Spotify-Collab-Playlist-App-Spotify-Collab-Playlist-AppUITests.release.xcconfig */,
+				894193B609B01AC8A314465D /* Pods-Spotify-Collab-Playlist-AppTests.debug.xcconfig */,
+				59CB026F2C59406F47E4BD6A /* Pods-Spotify-Collab-Playlist-AppTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		571EC80427FFFCBB00CC0F31 /* Spotify-Collab-Playlist-App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 571EC82F27FFFCBE00CC0F31 /* Build configuration list for PBXNativeTarget "Spotify-Collab-Playlist-App" */;
+			buildPhases = (
+				076F0B479E9A8D274A0BF3E2 /* [CP] Check Pods Manifest.lock */,
+				571EC80127FFFCBB00CC0F31 /* Sources */,
+				571EC80227FFFCBB00CC0F31 /* Frameworks */,
+				571EC80327FFFCBB00CC0F31 /* Resources */,
+				842BF21EDAA0AAD836B461ED /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Spotify-Collab-Playlist-App";
+			productName = "Spotify-Collab-Playlist-App";
+			productReference = 571EC80527FFFCBC00CC0F31 /* Spotify-Collab-Playlist-App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		571EC81A27FFFCBE00CC0F31 /* Spotify-Collab-Playlist-AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 571EC83227FFFCBE00CC0F31 /* Build configuration list for PBXNativeTarget "Spotify-Collab-Playlist-AppTests" */;
+			buildPhases = (
+				A5AE06664A8AAE9CE11D84A0 /* [CP] Check Pods Manifest.lock */,
+				571EC81727FFFCBE00CC0F31 /* Sources */,
+				571EC81827FFFCBE00CC0F31 /* Frameworks */,
+				571EC81927FFFCBE00CC0F31 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				571EC81D27FFFCBE00CC0F31 /* PBXTargetDependency */,
+			);
+			name = "Spotify-Collab-Playlist-AppTests";
+			productName = "Spotify-Collab-Playlist-AppTests";
+			productReference = 571EC81B27FFFCBE00CC0F31 /* Spotify-Collab-Playlist-AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		571EC82427FFFCBE00CC0F31 /* Spotify-Collab-Playlist-AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 571EC83527FFFCBE00CC0F31 /* Build configuration list for PBXNativeTarget "Spotify-Collab-Playlist-AppUITests" */;
+			buildPhases = (
+				897A15D8F1EC4B373091F9B0 /* [CP] Check Pods Manifest.lock */,
+				571EC82127FFFCBE00CC0F31 /* Sources */,
+				571EC82227FFFCBE00CC0F31 /* Frameworks */,
+				571EC82327FFFCBE00CC0F31 /* Resources */,
+				734AF2B021CA49AFA5CB6E90 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				571EC82727FFFCBE00CC0F31 /* PBXTargetDependency */,
+			);
+			name = "Spotify-Collab-Playlist-AppUITests";
+			productName = "Spotify-Collab-Playlist-AppUITests";
+			productReference = 571EC82527FFFCBE00CC0F31 /* Spotify-Collab-Playlist-AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		571EC7FD27FFFCBB00CC0F31 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					571EC80427FFFCBB00CC0F31 = {
+						CreatedOnToolsVersion = 13.3;
+					};
+					571EC81A27FFFCBE00CC0F31 = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = 571EC80427FFFCBB00CC0F31;
+					};
+					571EC82427FFFCBE00CC0F31 = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = 571EC80427FFFCBB00CC0F31;
+					};
+				};
+			};
+			buildConfigurationList = 571EC80027FFFCBB00CC0F31 /* Build configuration list for PBXProject "Spotify-Collab-Playlist-App" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 571EC7FC27FFFCBB00CC0F31;
+			productRefGroup = 571EC80627FFFCBC00CC0F31 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				571EC80427FFFCBB00CC0F31 /* Spotify-Collab-Playlist-App */,
+				571EC81A27FFFCBE00CC0F31 /* Spotify-Collab-Playlist-AppTests */,
+				571EC82427FFFCBE00CC0F31 /* Spotify-Collab-Playlist-AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		571EC80327FFFCBB00CC0F31 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				571EC81527FFFCBD00CC0F31 /* LaunchScreen.storyboard in Resources */,
+				571EC81227FFFCBD00CC0F31 /* Assets.xcassets in Resources */,
+				571EC81027FFFCBC00CC0F31 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		571EC81927FFFCBE00CC0F31 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		571EC82327FFFCBE00CC0F31 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		076F0B479E9A8D274A0BF3E2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Spotify-Collab-Playlist-App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		734AF2B021CA49AFA5CB6E90 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Spotify-Collab-Playlist-App-Spotify-Collab-Playlist-AppUITests/Pods-Spotify-Collab-Playlist-App-Spotify-Collab-Playlist-AppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Spotify-Collab-Playlist-App-Spotify-Collab-Playlist-AppUITests/Pods-Spotify-Collab-Playlist-App-Spotify-Collab-Playlist-AppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Spotify-Collab-Playlist-App-Spotify-Collab-Playlist-AppUITests/Pods-Spotify-Collab-Playlist-App-Spotify-Collab-Playlist-AppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		842BF21EDAA0AAD836B461ED /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Spotify-Collab-Playlist-App/Pods-Spotify-Collab-Playlist-App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Spotify-Collab-Playlist-App/Pods-Spotify-Collab-Playlist-App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Spotify-Collab-Playlist-App/Pods-Spotify-Collab-Playlist-App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		897A15D8F1EC4B373091F9B0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Spotify-Collab-Playlist-App-Spotify-Collab-Playlist-AppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5AE06664A8AAE9CE11D84A0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Spotify-Collab-Playlist-AppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		571EC80127FFFCBB00CC0F31 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				571EC80927FFFCBC00CC0F31 /* AppDelegate.swift in Sources */,
+				571EC80B27FFFCBC00CC0F31 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		571EC81727FFFCBE00CC0F31 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				571EC82027FFFCBE00CC0F31 /* Spotify_Collab_Playlist_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		571EC82127FFFCBE00CC0F31 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				571EC82C27FFFCBE00CC0F31 /* Spotify_Collab_Playlist_AppUITestsLaunchTests.swift in Sources */,
+				571EC82A27FFFCBE00CC0F31 /* Spotify_Collab_Playlist_AppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		571EC81D27FFFCBE00CC0F31 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 571EC80427FFFCBB00CC0F31 /* Spotify-Collab-Playlist-App */;
+			targetProxy = 571EC81C27FFFCBE00CC0F31 /* PBXContainerItemProxy */;
+		};
+		571EC82727FFFCBE00CC0F31 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 571EC80427FFFCBB00CC0F31 /* Spotify-Collab-Playlist-App */;
+			targetProxy = 571EC82627FFFCBE00CC0F31 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		571EC80E27FFFCBC00CC0F31 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				571EC80F27FFFCBC00CC0F31 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		571EC81327FFFCBD00CC0F31 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				571EC81427FFFCBD00CC0F31 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		571EC82D27FFFCBE00CC0F31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		571EC82E27FFFCBE00CC0F31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		571EC83027FFFCBE00CC0F31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 684999B03FB9E44D427D5A6C /* Pods-Spotify-Collab-Playlist-App.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 69369UYLRK;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Spotify-Collab-Playlist-App/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sstevens.Spotify-Collab-Playlist-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		571EC83127FFFCBE00CC0F31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9F650853734F703AD64B92D /* Pods-Spotify-Collab-Playlist-App.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 69369UYLRK;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Spotify-Collab-Playlist-App/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sstevens.Spotify-Collab-Playlist-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		571EC83327FFFCBE00CC0F31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 894193B609B01AC8A314465D /* Pods-Spotify-Collab-Playlist-AppTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 69369UYLRK;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sstevens.Spotify-Collab-Playlist-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Spotify-Collab-Playlist-App.app/Spotify-Collab-Playlist-App";
+			};
+			name = Debug;
+		};
+		571EC83427FFFCBE00CC0F31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59CB026F2C59406F47E4BD6A /* Pods-Spotify-Collab-Playlist-AppTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 69369UYLRK;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sstevens.Spotify-Collab-Playlist-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Spotify-Collab-Playlist-App.app/Spotify-Collab-Playlist-App";
+			};
+			name = Release;
+		};
+		571EC83627FFFCBE00CC0F31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 111E4DC20436D1E13416065F /* Pods-Spotify-Collab-Playlist-App-Spotify-Collab-Playlist-AppUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 69369UYLRK;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sstevens.Spotify-Collab-Playlist-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Spotify-Collab-Playlist-App";
+			};
+			name = Debug;
+		};
+		571EC83727FFFCBE00CC0F31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 415740B380D6AE1236EE3955 /* Pods-Spotify-Collab-Playlist-App-Spotify-Collab-Playlist-AppUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 69369UYLRK;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sstevens.Spotify-Collab-Playlist-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Spotify-Collab-Playlist-App";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		571EC80027FFFCBB00CC0F31 /* Build configuration list for PBXProject "Spotify-Collab-Playlist-App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				571EC82D27FFFCBE00CC0F31 /* Debug */,
+				571EC82E27FFFCBE00CC0F31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		571EC82F27FFFCBE00CC0F31 /* Build configuration list for PBXNativeTarget "Spotify-Collab-Playlist-App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				571EC83027FFFCBE00CC0F31 /* Debug */,
+				571EC83127FFFCBE00CC0F31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		571EC83227FFFCBE00CC0F31 /* Build configuration list for PBXNativeTarget "Spotify-Collab-Playlist-AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				571EC83327FFFCBE00CC0F31 /* Debug */,
+				571EC83427FFFCBE00CC0F31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		571EC83527FFFCBE00CC0F31 /* Build configuration list for PBXNativeTarget "Spotify-Collab-Playlist-AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				571EC83627FFFCBE00CC0F31 /* Debug */,
+				571EC83727FFFCBE00CC0F31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 571EC7FD27FFFCBB00CC0F31 /* Project object */;
+}

@@ -1,0 +1,21 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Spotify-Collab-Playlist-App' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Spotify-Collab-Playlist-App
+  pod 'AlamofireImage'
+  pod 'Parse'
+
+  target 'Spotify-Collab-Playlist-AppTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'Spotify-Collab-Playlist-AppUITests' do
+    # Pods for testing
+  end
+
+end
