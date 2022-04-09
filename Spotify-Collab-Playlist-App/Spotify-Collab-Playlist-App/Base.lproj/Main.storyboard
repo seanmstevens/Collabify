@@ -23,19 +23,6 @@
             </objects>
             <point key="canvasLocation" x="1675" y="-684"/>
         </scene>
-<<<<<<< Updated upstream
-        <!--Home-->
-        <scene sceneID="y7C-i2-LD5">
-            <objects>
-                <tableViewController id="nUN-EC-qKM" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" title="Home" id="BeX-Lc-cof">
-                        <barButtonItem key="leftBarButtonItem" image="plus" catalog="system" id="Pz7-XC-Owr"/>
-                    </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uG8-vf-gOK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2332" y="986"/>
-=======
         <!--Home View Controller -->
         <scene sceneID="8M1-5l-kIj">
             <objects>
@@ -53,16 +40,11 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nya-QZ-Uj7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2332" y="992"/>
->>>>>>> Stashed changes
         </scene>
         <!--Search View Controller-->
         <scene sceneID="Mbu-y9-mIA">
             <objects>
-<<<<<<< Updated upstream
-                <viewController id="IG9-1R-Zny" userLabel="Search View Controller" sceneMemberID="viewController">
-=======
                 <viewController title="SearchViewController" id="IG9-1R-Zny" userLabel="Search View Controller" customClass="SearchViewController" customModule="Spotify_Collab_Playlist_App" customModuleProvider="target" sceneMemberID="viewController">
->>>>>>> Stashed changes
                     <view key="view" contentMode="scaleToFill" id="hrI-oR-Lfl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -78,11 +60,7 @@
         <!--Profile View Controller-->
         <scene sceneID="w5H-aG-qUX">
             <objects>
-<<<<<<< Updated upstream
-                <viewController id="eM7-Sg-UWv" userLabel="Profile View Controller" sceneMemberID="viewController">
-=======
                 <viewController title="ProfileViewController" id="eM7-Sg-UWv" userLabel="Profile View Controller" customClass="ProfileViewController" customModule="Spotify_Collab_Playlist_App" customModuleProvider="target" sceneMemberID="viewController">
->>>>>>> Stashed changes
                     <view key="view" contentMode="scaleToFill" id="MhF-Ng-AWZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -124,11 +102,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-<<<<<<< Updated upstream
-                        <segue destination="nUN-EC-qKM" kind="relationship" relationship="rootViewController" id="keM-CW-ClU"/>
-=======
                         <segue destination="px3-cs-fLL" kind="relationship" relationship="rootViewController" id="uoE-Kv-rOb"/>
->>>>>>> Stashed changes
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DRc-fE-v0O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
