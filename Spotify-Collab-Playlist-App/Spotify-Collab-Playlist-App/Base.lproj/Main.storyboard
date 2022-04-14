@@ -23,23 +23,34 @@
             </objects>
             <point key="canvasLocation" x="1675" y="-684"/>
         </scene>
-        <!--Home View Controller -->
-        <scene sceneID="8M1-5l-kIj">
+        <!--Home Table View Controller-->
+        <scene sceneID="xHN-uF-sni">
             <objects>
-                <viewController title="HomeViewController" id="px3-cs-fLL" userLabel="Home View Controller " customClass="HomeViewController" customModule="Spotify_Collab_Playlist_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="l6P-rv-z6J">
+                <tableViewController id="tuq-YR-iYu" userLabel="Home Table View Controller" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="mbL-Fa-y85">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="RhE-j6-cs7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Home" id="HQ7-Ke-qXx">
-                        <barButtonItem key="leftBarButtonItem" image="plus" catalog="system" id="aV2-ZM-tpv"/>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nya-QZ-Uj7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="uMj-Bc-PVE">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uMj-Bc-PVE" id="KY6-6I-6O0">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="tuq-YR-iYu" id="Vt9-pq-Gg4"/>
+                            <outlet property="delegate" destination="tuq-YR-iYu" id="Tvp-iM-mKW"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="zMf-zt-Ita"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V0C-k7-02r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2332" y="992"/>
+            <point key="canvasLocation" x="2332" y="1006"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="Mbu-y9-mIA">
@@ -102,7 +113,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="px3-cs-fLL" kind="relationship" relationship="rootViewController" id="uoE-Kv-rOb"/>
+                        <segue destination="tuq-YR-iYu" kind="relationship" relationship="rootViewController" id="FtQ-UY-W7q"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DRc-fE-v0O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -114,7 +125,6 @@
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="person" catalog="system" width="128" height="117"/>
-        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
