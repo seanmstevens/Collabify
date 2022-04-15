@@ -15,3 +15,9 @@ class Track: IdentifiablePFObject {
     @NSManaged var duration: TimeInterval
     @NSManaged var spotifyID: String
 }
+
+extension Track: PFSubclassing {
+    class func parseClassName() -> String {
+        return "Track"
+    }
+}
