@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bdK-dm-9zK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bdK-dm-9zK">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Authentication View Contorller -->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="Authentication View Contorller " customClass="ViewController" customModule="Spotify_Collab_Playlist_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController interfaceStyle="dark" id="BYZ-38-t0r" userLabel="Authentication View Contorller " customClass="ViewController" customModule="Spotify_Collab_Playlist_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,35 +23,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1675" y="-684"/>
-        </scene>
-        <!--Home Table View Controller-->
-        <scene sceneID="xHN-uF-sni">
-            <objects>
-                <tableViewController title="HomeViewController" id="tuq-YR-iYu" userLabel="Home Table View Controller" customClass="HomeViewController" customModule="Spotify_Collab_Playlist_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="mbL-Fa-y85">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="uMj-Bc-PVE">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uMj-Bc-PVE" id="KY6-6I-6O0">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="tuq-YR-iYu" id="Vt9-pq-Gg4"/>
-                            <outlet property="delegate" destination="tuq-YR-iYu" id="Tvp-iM-mKW"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="zMf-zt-Ita"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="V0C-k7-02r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2332" y="1006"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="Mbu-y9-mIA">
@@ -87,7 +59,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="ydi-JR-oLv">
             <objects>
-                <tabBarController id="bdK-dm-9zK" sceneMemberID="viewController">
+                <tabBarController interfaceStyle="dark" id="bdK-dm-9zK" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7TB-6y-mMK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -107,24 +79,149 @@
         <scene sceneID="eSh-JD-rN9">
             <objects>
                 <navigationController id="6OX-sP-j6g" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" image="homekit" catalog="system" id="GAR-eV-4wt"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="GAR-eV-4wt"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="kFX-do-RJg">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="tuq-YR-iYu" kind="relationship" relationship="rootViewController" id="FtQ-UY-W7q"/>
+                        <segue destination="nvr-SQ-bsN" kind="relationship" relationship="rootViewController" id="zA0-PL-hpg"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DRc-fE-v0O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2332" y="206"/>
         </scene>
+        <!--Home View Controller-->
+        <scene sceneID="Olh-17-BrZ">
+            <objects>
+                <viewController id="nvr-SQ-bsN" customClass="HomeViewController" customModule="Spotify_Collab_Playlist_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nNa-Vi-PEU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="liu-1T-jhW">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nRi-6O-ano">
+                                    <size key="itemSize" width="200" height="200"/>
+                                    <size key="headerReferenceSize" width="50" height="56"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MyPlaylistsCell" id="2o8-aw-i5n" customClass="MyPlaylistsCell" customModule="Spotify_Collab_Playlist_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="56" width="200" height="238.5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="hMc-1Q-ed2">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="238.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="7Xo-pi-qZH">
+                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="238.5"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ziC-Df-pce">
+                                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="ziC-Df-pce" secondAttribute="height" multiplier="1:1" id="P0d-g6-MLU"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Playlist Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rd3-y8-t39">
+                                                            <rect key="frame" x="0.0" y="204" width="200" height="17"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8 Contributors" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zvg-ZV-XMK">
+                                                            <rect key="frame" x="0.0" y="225" width="200" height="13.5"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
+                                                            <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="ziC-Df-pce" secondAttribute="trailing" id="0un-HY-mis"/>
+                                                        <constraint firstItem="Rd3-y8-t39" firstAttribute="leading" secondItem="7Xo-pi-qZH" secondAttribute="leading" id="3eg-KS-5mA"/>
+                                                        <constraint firstAttribute="trailing" secondItem="zvg-ZV-XMK" secondAttribute="trailing" id="6H3-H0-a5h"/>
+                                                        <constraint firstItem="ziC-Df-pce" firstAttribute="leading" secondItem="7Xo-pi-qZH" secondAttribute="leading" id="jmd-pm-X1u"/>
+                                                        <constraint firstItem="zvg-ZV-XMK" firstAttribute="leading" secondItem="7Xo-pi-qZH" secondAttribute="leading" id="oEm-u2-Iw4"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Rd3-y8-t39" secondAttribute="trailing" id="yKK-y9-KYp"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="7Xo-pi-qZH" firstAttribute="leading" secondItem="hMc-1Q-ed2" secondAttribute="leading" id="3DC-WF-tjC"/>
+                                                <constraint firstItem="7Xo-pi-qZH" firstAttribute="top" secondItem="hMc-1Q-ed2" secondAttribute="top" id="GuE-oZ-VqS"/>
+                                                <constraint firstAttribute="trailing" secondItem="7Xo-pi-qZH" secondAttribute="trailing" id="I0D-Oy-WZ8"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="7Xo-pi-qZH" secondAttribute="bottom" id="pxp-bG-i4q"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="contributorsLabel" destination="zvg-ZV-XMK" id="XvC-Fr-dDN"/>
+                                            <outlet property="imageView" destination="ziC-Df-pce" id="kc9-D7-zpJ"/>
+                                            <outlet property="titleLabel" destination="Rd3-y8-t39" id="VKg-HN-ltq"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="DiscoverCell" id="CtJ-kS-tfe" customClass="DiscoverCell" customModule="Spotify_Collab_Playlist_App" customModuleProvider="target">
+                                        <rect key="frame" x="210" y="75.5" width="200" height="200"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="qef-e0-v6a">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="HeaderView" id="H9T-lR-5DX" customClass="HeaderView" customModule="Spotify_Collab_Playlist_App" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Playlists" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P49-u5-OMC">
+                                            <rect key="frame" x="8" y="8" width="398" height="40"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="P49-u5-OMC" secondAttribute="trailing" id="5hN-M2-dS3"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="P49-u5-OMC" secondAttribute="bottom" id="cgd-Uc-NhZ"/>
+                                        <constraint firstItem="P49-u5-OMC" firstAttribute="top" secondItem="H9T-lR-5DX" secondAttribute="topMargin" id="qOV-e1-kIa"/>
+                                        <constraint firstItem="P49-u5-OMC" firstAttribute="leading" secondItem="H9T-lR-5DX" secondAttribute="leadingMargin" id="x52-qi-R7O"/>
+                                    </constraints>
+                                </collectionReusableView>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="etN-MR-S5H"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="liu-1T-jhW" secondAttribute="trailing" id="Ac2-e5-OVG"/>
+                            <constraint firstAttribute="bottom" secondItem="liu-1T-jhW" secondAttribute="bottom" id="BDh-zV-Kys"/>
+                            <constraint firstItem="liu-1T-jhW" firstAttribute="leading" secondItem="nNa-Vi-PEU" secondAttribute="leading" id="Zgh-EG-DGp"/>
+                            <constraint firstItem="liu-1T-jhW" firstAttribute="top" secondItem="nNa-Vi-PEU" secondAttribute="top" id="e4X-BC-IlC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="GHf-5m-u3y">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="person.circle" catalog="system" id="9M9-vf-pWE"/>
+                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="N9q-Jm-abS"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="liu-1T-jhW" id="yCw-W3-hSN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cNN-t4-McC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2330.434782608696" y="970.98214285714278"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="homekit" catalog="system" width="128" height="106"/>
+        <image name="house" catalog="system" width="128" height="106"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="person" catalog="system" width="128" height="117"/>
+        <image name="person.circle" catalog="system" width="128" height="121"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
