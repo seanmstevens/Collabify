@@ -25,7 +25,7 @@
 		57BA773C280935EA005E44F0 /* UICollectionReusableView+ReuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BA773B280935EA005E44F0 /* UICollectionReusableView+ReuseIdentifier.swift */; };
 		57BA773E28093641005E44F0 /* DiscoverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BA773D28093641005E44F0 /* DiscoverCell.swift */; };
 		57BA77402809380E005E44F0 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BA773F2809380E005E44F0 /* HeaderView.swift */; };
-		57BA7742280948C4005E44F0 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BA7741280948C4005E44F0 /* Secrets.swift */; };
+		57BA77442809E6DC005E44F0 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BA77432809E6DC005E44F0 /* Secrets.swift */; };
 		6285079328012D59006D6A23 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6285079228012D59006D6A23 /* HomeViewController.swift */; };
 		6285079528012E7D006D6A23 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6285079428012E7D006D6A23 /* SearchViewController.swift */; };
 		6285079728012EA9006D6A23 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6285079628012EA9006D6A23 /* ProfileViewController.swift */; };
@@ -74,7 +74,7 @@
 		57BA773B280935EA005E44F0 /* UICollectionReusableView+ReuseIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionReusableView+ReuseIdentifier.swift"; sourceTree = "<group>"; };
 		57BA773D28093641005E44F0 /* DiscoverCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverCell.swift; sourceTree = "<group>"; };
 		57BA773F2809380E005E44F0 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
-		57BA7741280948C4005E44F0 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
+		57BA77432809E6DC005E44F0 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Secrets.swift; path = "Spotify-Collab-Playlist-App/Secrets.swift"; sourceTree = SOURCE_ROOT; };
 		59CB026F2C59406F47E4BD6A /* Pods-Spotify-Collab-Playlist-AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spotify-Collab-Playlist-AppTests.release.xcconfig"; path = "Target Support Files/Pods-Spotify-Collab-Playlist-AppTests/Pods-Spotify-Collab-Playlist-AppTests.release.xcconfig"; sourceTree = "<group>"; };
 		6285079228012D59006D6A23 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = SOURCE_ROOT; };
 		6285079428012E7D006D6A23 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -204,7 +204,7 @@
 		571EC83A27FFFCE500CC0F31 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				57BA7741280948C4005E44F0 /* Secrets.swift */,
+				57BA77432809E6DC005E44F0 /* Secrets.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -480,7 +480,7 @@
 				6285079728012EA9006D6A23 /* ProfileViewController.swift in Sources */,
 				6285079528012E7D006D6A23 /* SearchViewController.swift in Sources */,
 				6285079328012D59006D6A23 /* HomeViewController.swift in Sources */,
-				57BA7742280948C4005E44F0 /* Secrets.swift in Sources */,
+				57BA77442809E6DC005E44F0 /* Secrets.swift in Sources */,
 				57BA77302808BA2E005E44F0 /* Playlist.swift in Sources */,
 				57BA77322808BDCF005E44F0 /* Track.swift in Sources */,
 				57BA773A280935BD005E44F0 /* MyPlaylistsCell.swift in Sources */,
