@@ -9,13 +9,24 @@ import UIKit
 
 class PlaylistViewController: UIViewController {
     
+    @IBOutlet weak var playlistImageView: UIImageView!
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
+    
     var playlist: Playlist!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(playlist["title"])
-        // Do any additional setup after loading the view.
         
+        // Do any additional setup after loading the view.
+        titleLabel.text = playlist["title"] as? String
+        descriptionLabel.text = playlist["desc"] as? String
+        if let url = playlist.image?.url {
+            playlistImageView.af.setImage(withURL: URL(string: url)!, imageTransition: .crossDissolve(0.16))
+        }
         
     }
     
