@@ -160,6 +160,7 @@
                                             <outlet property="contributorsLabel" destination="zvg-ZV-XMK" id="XvC-Fr-dDN"/>
                                             <outlet property="imageView" destination="ziC-Df-pce" id="kc9-D7-zpJ"/>
                                             <outlet property="titleLabel" destination="Rd3-y8-t39" id="VKg-HN-ltq"/>
+                                            <segue destination="tra-h5-7Dc" kind="show" id="Thj-JA-EAA"/>
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="DiscoverCell" id="CtJ-kS-tfe" customClass="DiscoverCell" customModule="Spotify_Collab_Playlist_App" customModuleProvider="target">
@@ -211,6 +212,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cNN-t4-McC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2330.434782608696" y="970.98214285714278"/>
+        </scene>
+        <!--Playlist View Controller-->
+        <scene sceneID="1UC-aN-cb4">
+            <objects>
+                <viewController id="tra-h5-7Dc" customClass="PlaylistViewController" customModule="Spotify_Collab_Playlist_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="66F-6E-Z2C">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="tt0-fv-ukb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="UJX-13-GgF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nga-uW-9kS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1723" y="1755"/>
         </scene>
     </scenes>
     <resources>

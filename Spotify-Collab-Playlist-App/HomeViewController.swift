@@ -158,15 +158,26 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
+    // prepare the data from the list in home screen and pass it to PlaylistViewController
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        let cell = sender as! UICollectionViewCell
+        let indexPath = collectionView.indexPath(for: cell)!
+        let playlist = playlists[indexPath.row]
+        
+        let playlistViewController = segue.destination as! PlaylistViewController
+        playlistViewController.playlist = playlist
+
+//        collectionView.deselectItem(at: indexPath, animated: true)
     }
-    */
+    
 
 }
 
