@@ -270,7 +270,6 @@
                                     <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="createButton:" destination="2ck-UB-Cq3" eventType="touchUpInside" id="JRu-ZM-MJF"/>
                                     <action selector="onCreateButton:" destination="2ck-UB-Cq3" eventType="touchUpInside" id="plT-nb-Dbc"/>
                                 </connections>
                             </button>

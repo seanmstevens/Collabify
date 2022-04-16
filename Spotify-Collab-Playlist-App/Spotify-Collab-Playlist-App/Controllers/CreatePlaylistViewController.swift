@@ -28,7 +28,7 @@ class CreatePlaylistViewController: UIViewController, UIImagePickerControllerDel
         let playlist = Playlist()
         
         let imageData = playlistImageView.image!.pngData()
-        let file = PFFileObject(name:"imahe.png", data: imageData!)
+        let file = PFFileObject(name:"image.png", data: imageData!)
         playlist.image = file
         playlist.title = playlistNameField.text!
         playlist.desc = playlistDescriptionView.text!
