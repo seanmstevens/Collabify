@@ -256,3 +256,8 @@ Figma Wireframes/mockups: https://www.figma.com/file/MvkJd9Yeq0w9gZkvZw5FQe/Spot
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
+
+
+### GIFs 
+![](https://i.imgur.com/1ba6g38.gif)
+
