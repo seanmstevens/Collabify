@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import AlamofireImage
+import Parse
 
 class CreatePlaylistViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -22,8 +24,27 @@ class CreatePlaylistViewController: UIViewController, UIImagePickerControllerDel
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func createButton(_ sender: Any) {
+    @IBAction func onCreateButton(_ sender: Any) {
+        let playlist = Playlist()
+        
+        let imageData = playlistImageView.image!.pngData()
+        let file = PFFileObject(name:"imahe.png", data: imageData!)
+        playlist.image = file
+        playlist.title = playlistNameField.text!
+        playlist.desc = playlistDescriptionView.text!
+//        playlist["author"] = PFUser.current()!
+        
+        playlist.saveInBackground { (success, error) in
+            if success {
+                self.dismiss(animated: true, completion: nil)
+                print("saved!")
+            } else {
+                print("error!")
+            }
+        }
+        
     }
+    
     
     @IBAction func onCameraButton(_ sender: Any) {
         let picker = UIImagePickerController()
@@ -44,7 +65,7 @@ class CreatePlaylistViewController: UIViewController, UIImagePickerControllerDel
         let image = info[.editedImage] as! UIImage
         
         let size = CGSize(width: 300, height: 300)
-        let scaledImage = image.af_imageScaled(to: size)
+        let scaledImage = image.af.imageScaled(to: size)
         
         playlistImageView.image = scaledImage
         

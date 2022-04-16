@@ -271,6 +271,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="createButton:" destination="2ck-UB-Cq3" eventType="touchUpInside" id="JRu-ZM-MJF"/>
+                                    <action selector="onCreateButton:" destination="2ck-UB-Cq3" eventType="touchUpInside" id="plT-nb-Dbc"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Create a new playlist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icC-2N-G6h">
