@@ -8,28 +8,32 @@
 import UIKit
 import Parse
 
-class HomeViewController: UIViewController, UICollectionViewDelegate {
-
+class HomeViewController: UIViewController, UICollectionViewDelegate, UISearchResultsUpdating {
     @IBOutlet weak var collectionView: UICollectionView!
 
     static let sectionHeaderElementKind = "section-header-element-kind"
-
-    enum Section: String, CaseIterable {
-      case myPlaylists = "My Playlists"
-      case discover = "Discover"
-    }
     
     private typealias DataSource = UICollectionViewDiffableDataSource<Section, Playlist>
     private typealias Snapshot = NSDiffableDataSourceSnapshot<Section, Playlist>
     
     private lazy var dataSource = configureDataSource()
     
-    var playlists = [Playlist]()
+    private var sections = Section.allSections
+    private var filteredSections = Section.allSections
     var playlistsToRetrieve = 20
+    
+    let searchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureCollectionView()
+        
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search Playlists"
+        
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
         // Do any additional setup after loading the view.
     }
     
@@ -40,7 +44,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
     
     private func configureDataSource() -> DataSource {
         let dataSource = DataSource(collectionView: collectionView) { collectionView, indexPath, itemIdentifier in
-            let sectionType = Section.allCases[indexPath.section]
+            let sectionType = SectionEnum.allCases[indexPath.section]
             
             switch sectionType {
             case .myPlaylists:
@@ -65,7 +69,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
                 fatalError("Unable to create header view")
             }
             
-            supplementaryView.label.text = Section.allCases[indexPath.section].rawValue
+            supplementaryView.label.text = SectionEnum.allCases[indexPath.section].rawValue
             return supplementaryView
         }
         
@@ -74,12 +78,11 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
     
     private func applySnapshot(animatingDifferences: Bool = true) {
         var snapshot = Snapshot()
-
-        snapshot.appendSections([Section.myPlaylists])
-        snapshot.appendItems(playlists)
         
-        snapshot.appendSections([Section.discover])
-        //snapshot.appendItems(playlists)
+        snapshot.appendSections(filteredSections)
+        filteredSections.forEach { section in
+            snapshot.appendItems(section.playlists, toSection: section)
+        }
         
         dataSource.apply(snapshot, animatingDifferences: animatingDifferences)
     }
@@ -101,7 +104,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
         let layout = UICollectionViewCompositionalLayout { sectionIndex, layoutEnvironment in
             let isWideView = layoutEnvironment.container.effectiveContentSize.width > 500
             
-            let sectionLayoutKind = Section.allCases[sectionIndex]
+            let sectionLayoutKind = SectionEnum.allCases[sectionIndex]
             switch sectionLayoutKind {
             case .myPlaylists: return self.generateMyPlaylistsLayout(isWide: isWideView)
             case .discover: return self.generateDiscoverLayout(isWide: isWideView)
@@ -112,13 +115,14 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
     }
     
     private func generateMyPlaylistsLayout(isWide: Bool) -> NSCollectionLayoutSection {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalWidth(1.0))
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(200))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
-        let groupFractionalWidth = isWide ? 0.95 / 4 : 0.95 / 2
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(groupFractionalWidth), heightDimension: .absolute(240))
-        let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitem: item, count: 1)
-        group.contentInsets = NSDirectionalEdgeInsets(top: 8, leading: 8, bottom: 8, trailing: 8)
+        let groupFractionalWidth = isWide ? 1.0 / 4 : 1.0 / 2
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(groupFractionalWidth), heightDimension: .estimated(200))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 1)
+        group.contentInsets.leading = 8
+        group.contentInsets.trailing = 8
         
         let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(44))
         let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize, elementKind: HomeViewController.sectionHeaderElementKind, alignment: .top)
@@ -137,10 +141,10 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
 
         let groupSize = NSCollectionLayoutSize(
-          widthDimension: .absolute(140),
+            widthDimension: .fractionalWidth(1.0),
           heightDimension: .absolute(186))
         let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitem: item, count: 1)
-        group.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5)
+        group.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 8)
 
         let headerSize = NSCollectionLayoutSize(
           widthDimension: .fractionalWidth(1.0),
@@ -155,6 +159,39 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
         section.orthogonalScrollingBehavior = .groupPaging
 
         return section
+    }
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        filteredSections = filteredSections(for: searchController.searchBar.text)
+        applySnapshot()
+    }
+    
+    private func filteredSections(for query: String?) -> [Section] {
+        let sections = sections.map { $0.copy() as! Section }
+        
+        guard let query = query, !query.isEmpty else {
+            return sections
+        }
+        
+        for section in sections {
+            section.playlists = section.playlists.filter { $0.contains(query: query) }
+        }
+        
+        return sections.filter { !$0.playlists.isEmpty }
+        
+        
+//        return sections.filter { section in
+//            var matches = section.title.range(of: query, options: .caseInsensitive) != nil
+//
+//            for playlist in section.playlists {
+//                if playlist.title.range(of: query, options: .caseInsensitive) != nil {
+//                    matches = true
+//                    break
+//                }
+//            }
+//
+//            return matches
+//        }
     }
     
 
@@ -179,6 +216,7 @@ extension HomeViewController {
         let query = Playlist.query()!
         query.includeKeys(["contributors", "tracks"])
         query.limit = playlistsToRetrieve
+        query.order(byDescending: "createdAt")
         
         query.findObjectsInBackground { playlists, error in
             if let error = error {
@@ -187,13 +225,29 @@ extension HomeViewController {
                 var insertionPoint = 0
                 
                 for playlist in playlists {
-                    print(playlist)
-                    self.playlists.append(playlist)
+                    self.sections[0].playlists.append(playlist)
                 }
                 
+                self.filteredSections = self.sections
                 self.applySnapshot()
                 self.collectionView.refreshControl?.endRefreshing()
             }
         }
+        
+//        query.whereKey("contributors", equalTo: PFUser.current())
+//        query.findObjectsInBackground { playlists, error in
+//            if let error = error {
+//                print("Error retrieving my playlists: \(error.localizedDescription)")
+//            } else if let playlists = playlists as? [Playlist] {
+//                var insertionPoint = 0
+//
+//                for playlist in playlists {
+//                    self.playlists.append(playlist)
+//                }
+//
+//                self.applySnapshot()
+//                self.collectionView.refreshControl?.endRefreshing()
+//            }
+//        }
     }
 }
