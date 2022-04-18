@@ -7,6 +7,7 @@
 
 import UIKit
 import Parse
+import Lottie
 
 class HomeViewController: UIViewController, UICollectionViewDelegate {
     enum Section: String, CaseIterable {
@@ -32,17 +33,35 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
     private var requestTimestamp: Date? = nil
     
     let searchController = UISearchController(searchResultsController: nil)
+    var animationView: AnimationView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureCollectionView()
         configureSearchBar()
+        startAnimations()
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         refreshFeed()
+    }
+    
+    private func startAnimations() {
+        let width: CGFloat = 75, height: CGFloat = 75
+        animationView = .init(name: "loader")
+        animationView?.frame = CGRect(x: (view.frame.width - width) / 2, y: (view.frame.height - height) / 2, width: width, height: height)
+        animationView?.contentMode = .scaleAspectFit
+        animationView?.loopMode = .loop
+        
+        view.addSubview(animationView!)
+        animationView?.play()
+    }
+    
+    private func stopAnimations() {
+        animationView?.stop()
+        view.subviews.last?.removeFromSuperview()
     }
     
     private func configureDataSource() -> DataSource {
@@ -68,7 +87,6 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
         }
         
         dataSource.supplementaryViewProvider = {(collectionView: UICollectionView, kind: String, indexPath: IndexPath) -> UICollectionReusableView? in
-            
             guard let supplementaryView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: HeaderView.reuseIdentifier, for: indexPath) as? HeaderView else {
                 fatalError("Unable to create header view")
             }
@@ -108,58 +126,48 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
             
             let sectionLayoutKind = Section.allCases[sectionIndex]
             switch sectionLayoutKind {
-            case .myPlaylists: return self.generateMyPlaylistsLayout(isWide: isWideView)
-            case .discover: return self.generateDiscoverLayout(isWide: isWideView)
+            case .myPlaylists: return self.generateMyPlaylistsLayout(isWide: isWideView, numItems: self.dataSource.snapshot().numberOfItems(inSection: .myPlaylists))
+            case .discover: return self.generateDiscoverLayout(isWide: isWideView, numItems: self.dataSource.snapshot().numberOfItems(inSection: .discover))
             }
         }
         
         return layout
     }
     
-    private func generateMyPlaylistsLayout(isWide: Bool) -> NSCollectionLayoutSection {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(200))
+    private func generateMyPlaylistsLayout(isWide: Bool, numItems: Int) -> NSCollectionLayoutSection {
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(1))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
         let groupFractionalWidth = isWide ? 0.95 / 4 : 0.95 / 2
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(groupFractionalWidth), heightDimension: .estimated(200))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(groupFractionalWidth), heightDimension: .estimated(1))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 1)
         group.contentInsets.leading = 8
         group.contentInsets.trailing = 8
         
-        let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(44))
+        let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(60))
         let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize, elementKind: HomeViewController.sectionHeaderElementKind, alignment: .top)
         
         let section = NSCollectionLayoutSection(group: group)
-        section.boundarySupplementaryItems = [sectionHeader]
+        if numItems > 0 { section.boundarySupplementaryItems = [sectionHeader] }
         section.orthogonalScrollingBehavior = .continuousGroupLeadingBoundary
         
         return section
     }
     
-    private func generateDiscoverLayout(isWide: Bool) -> NSCollectionLayoutSection {
+    private func generateDiscoverLayout(isWide: Bool, numItems: Int) -> NSCollectionLayoutSection {
         let itemFractionalWidth = isWide ? 0.5 : 1.0
-        let itemSize = NSCollectionLayoutSize(
-          widthDimension: .fractionalWidth(itemFractionalWidth),
-          heightDimension: .fractionalHeight(1.0))
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(itemFractionalWidth), heightDimension: .fractionalHeight(1.0))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        item.contentInsets = NSDirectionalEdgeInsets(top: 8, leading: 8, bottom: 8, trailing: 8)
+        item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 8, bottom: 16, trailing: 8)
 
-        let groupSize = NSCollectionLayoutSize(
-            widthDimension: .fractionalWidth(1.0),
-            heightDimension: .fractionalWidth(itemFractionalWidth / 2))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalWidth(itemFractionalWidth / 2))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
-        //group.contentInsets = NSDirectionalEdgeInsets(top: 8, leading: 8, bottom: 8, trailing: 8)
 
-        let headerSize = NSCollectionLayoutSize(
-          widthDimension: .fractionalWidth(1.0),
-          heightDimension: .estimated(44))
-        let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
-          layoutSize: headerSize,
-          elementKind: HomeViewController.sectionHeaderElementKind,
-          alignment: .top)
+        let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(60))
+        let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize, elementKind: HomeViewController.sectionHeaderElementKind, alignment: .top)
 
         let section = NSCollectionLayoutSection(group: group)
-        section.boundarySupplementaryItems = [sectionHeader]
+        if numItems > 0 { section.boundarySupplementaryItems = [sectionHeader] }
 
         return section
     }
@@ -178,7 +186,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
 }
 
 extension HomeViewController {
-    @objc func refreshFeed() {
+    @objc private func refreshFeed() {
         retrievePlaylists(since: myPlaylists.first?.createdAt)
     }
     
@@ -202,16 +210,20 @@ extension HomeViewController {
             myPlaylistsQuery.whereKey("createdAt", lessThan: maxTime)
         }
         
-        discoverPlaylistsQuery.whereKey("contributors", notEqualTo: PFUser(withoutDataWithObjectId: "XOosvNNXvd"))
-        myPlaylistsQuery.whereKey("contributors", equalTo: PFUser(withoutDataWithObjectId: "XOosvNNXvd"))
+        discoverPlaylistsQuery.whereKey("contributors", notEqualTo: PFUser.current())
+        myPlaylistsQuery.whereKey("contributors", equalTo: PFUser.current())
         
         requestTimestamp = Date()
+        
+        let group = DispatchGroup()
+        
+        group.enter()
         discoverPlaylistsQuery.findObjectsInBackground { playlists, error in
             if let error = error {
                 print("Error retrieving discover playlists: \(error.localizedDescription)")
             } else if let playlists = playlists as? [Playlist] {
                 var insertionPoint = 0
-                
+
                 for playlist in playlists {
                     if minTime != nil {
                         self.discoverPlaylists.insert(playlist, at: insertionPoint)
@@ -222,18 +234,17 @@ extension HomeViewController {
                 }
 
                 self.filteredDiscoverPlaylists = self.discoverPlaylists
-                self.applySnapshot()
-                self.requestTimestamp = nil
-                self.collectionView.refreshControl?.endRefreshing()
             }
+            group.leave()
         }
         
+        group.enter()
         myPlaylistsQuery.findObjectsInBackground { playlists, error in
             if let error = error {
                 print("Error retrieving discover playlists: \(error.localizedDescription)")
             } else if let playlists = playlists as? [Playlist] {
                 var insertionPoint = 0
-                
+
                 for playlist in playlists {
                     if minTime != nil {
                         self.myPlaylists.insert(playlist, at: insertionPoint)
@@ -244,10 +255,16 @@ extension HomeViewController {
                 }
 
                 self.filteredMyPlaylists = self.myPlaylists
-                self.applySnapshot()
-                self.requestTimestamp = nil
-                self.collectionView.refreshControl?.endRefreshing()
             }
+            group.leave()
+        }
+        
+        group.notify(queue: .main) {
+            print("Both tasks done!")
+            self.stopAnimations()
+            self.applySnapshot(animatingDifferences: animatingDifferences)
+            self.requestTimestamp = nil
+            self.collectionView.refreshControl?.endRefreshing()
         }
     }
 }

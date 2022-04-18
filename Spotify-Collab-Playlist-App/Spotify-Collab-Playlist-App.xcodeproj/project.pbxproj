@@ -27,6 +27,7 @@
 		57BA77402809380E005E44F0 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BA773F2809380E005E44F0 /* HeaderView.swift */; };
 		57BA77442809E6DC005E44F0 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BA77432809E6DC005E44F0 /* Secrets.swift */; };
 		57BA7746280B33A8005E44F0 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BA7745280B33A8005E44F0 /* Section.swift */; };
+		57BA7749280DBA39005E44F0 /* loader.json in Resources */ = {isa = PBXBuildFile; fileRef = 57BA7748280DBA39005E44F0 /* loader.json */; };
 		6285079328012D59006D6A23 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6285079228012D59006D6A23 /* HomeViewController.swift */; };
 		6285079528012E7D006D6A23 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6285079428012E7D006D6A23 /* SearchViewController.swift */; };
 		6285079728012EA9006D6A23 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6285079628012EA9006D6A23 /* ProfileViewController.swift */; };
@@ -77,6 +78,7 @@
 		57BA773F2809380E005E44F0 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		57BA77432809E6DC005E44F0 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Secrets.swift; path = "Spotify-Collab-Playlist-App/Secrets.swift"; sourceTree = SOURCE_ROOT; };
 		57BA7745280B33A8005E44F0 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		57BA7748280DBA39005E44F0 /* loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loader.json; sourceTree = "<group>"; };
 		59CB026F2C59406F47E4BD6A /* Pods-Spotify-Collab-Playlist-AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spotify-Collab-Playlist-AppTests.release.xcconfig"; path = "Target Support Files/Pods-Spotify-Collab-Playlist-AppTests/Pods-Spotify-Collab-Playlist-AppTests.release.xcconfig"; sourceTree = "<group>"; };
 		6285079228012D59006D6A23 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = SOURCE_ROOT; };
 		6285079428012E7D006D6A23 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -150,6 +152,7 @@
 		571EC80727FFFCBC00CC0F31 /* Spotify-Collab-Playlist-App */ = {
 			isa = PBXGroup;
 			children = (
+				57BA7747280DB87C005E44F0 /* Extra */,
 				571EC83B27FFFCED00CC0F31 /* Utilities */,
 				571EC83A27FFFCE500CC0F31 /* Networking */,
 				571EC83927FFFCDD00CC0F31 /* Controllers */,
@@ -220,6 +223,14 @@
 				57BA773B280935EA005E44F0 /* UICollectionReusableView+ReuseIdentifier.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		57BA7747280DB87C005E44F0 /* Extra */ = {
+			isa = PBXGroup;
+			children = (
+				57BA7748280DBA39005E44F0 /* loader.json */,
+			);
+			path = Extra;
 			sourceTree = "<group>";
 		};
 		62B85CAE915EABA04F949A4E /* Pods */ = {
@@ -347,6 +358,7 @@
 				571EC81527FFFCBD00CC0F31 /* LaunchScreen.storyboard in Resources */,
 				571EC81227FFFCBD00CC0F31 /* Assets.xcassets in Resources */,
 				571EC81027FFFCBC00CC0F31 /* Main.storyboard in Resources */,
+				57BA7749280DBA39005E44F0 /* loader.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
