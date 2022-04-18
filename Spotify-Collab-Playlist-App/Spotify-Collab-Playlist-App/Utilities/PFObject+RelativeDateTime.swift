@@ -8,7 +8,7 @@
 import Parse
 
 extension PFObject {
-    func getRelativeDateTimeString() -> String {
+    func getRelativeDateTimeString(for date: Date?) -> String {
         let formatter = RelativeDateTimeFormatter()
         formatter.dateTimeStyle = .named
         formatter.unitsStyle = .full

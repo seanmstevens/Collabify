@@ -24,7 +24,7 @@ class HeaderView: UICollectionReusableView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.adjustsFontForContentSizeCategory = true
         
-        let inset = CGFloat(8)
+        let inset = CGFloat(16)
         NSLayoutConstraint.activate([
             label.leadingAnchor.constraint(equalTo: leadingAnchor, constant: inset),
             label.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -inset),
