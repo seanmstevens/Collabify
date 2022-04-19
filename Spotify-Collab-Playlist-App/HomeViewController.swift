@@ -61,7 +61,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
     
     private func stopAnimations() {
         animationView?.stop()
-        view.subviews.last?.removeFromSuperview()
+        animationView?.removeFromSuperview()
     }
     
     private func configureDataSource() -> DataSource {
@@ -107,7 +107,9 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
         snapshot.appendSections([.discover])
         snapshot.appendItems(filteredDiscoverPlaylists, toSection: .discover)
         
-        dataSource.apply(snapshot, animatingDifferences: animatingDifferences)
+        dataSource.apply(snapshot, animatingDifferences: animatingDifferences) {
+            print("Applied snapshot")
+        }
     }
     
     private func configureCollectionView() {
@@ -213,9 +215,8 @@ extension HomeViewController {
         discoverPlaylistsQuery.whereKey("contributors", notEqualTo: PFUser.current())
         myPlaylistsQuery.whereKey("contributors", equalTo: PFUser.current())
         
-        requestTimestamp = Date()
-        
         let group = DispatchGroup()
+        requestTimestamp = Date()
         
         group.enter()
         discoverPlaylistsQuery.findObjectsInBackground { playlists, error in
@@ -264,7 +265,10 @@ extension HomeViewController {
             self.stopAnimations()
             self.applySnapshot(animatingDifferences: animatingDifferences)
             self.requestTimestamp = nil
-            self.collectionView.refreshControl?.endRefreshing()
+            
+            DispatchQueue.main.async {
+                self.collectionView.refreshControl?.endRefreshing()
+            }
         }
     }
 }
