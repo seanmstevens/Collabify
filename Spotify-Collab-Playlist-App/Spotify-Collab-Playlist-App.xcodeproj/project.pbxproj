@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0A225DC8054B1D3C08926827 /* Pods_Spotify_Collab_Playlist_App_Spotify_Collab_Playlist_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0629736841AF72ADB2C49390 /* Pods_Spotify_Collab_Playlist_App_Spotify_Collab_Playlist_AppUITests.framework */; };
 		271E9B1EEAC53F9B03BF906A /* Pods_Spotify_Collab_Playlist_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4784E5B005F506696288CEAF /* Pods_Spotify_Collab_Playlist_App.framework */; };
+		41CEE3B1280A7E7E00003CAB /* CreatePlaylistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CEE3B0280A7E7E00003CAB /* CreatePlaylistViewController.swift */; };
 		571EC80927FFFCBC00CC0F31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571EC80827FFFCBC00CC0F31 /* AppDelegate.swift */; };
 		571EC80B27FFFCBC00CC0F31 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571EC80A27FFFCBC00CC0F31 /* SceneDelegate.swift */; };
 		571EC81027FFFCBC00CC0F31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 571EC80E27FFFCBC00CC0F31 /* Main.storyboard */; };
@@ -55,6 +56,7 @@
 		0629736841AF72ADB2C49390 /* Pods_Spotify_Collab_Playlist_App_Spotify_Collab_Playlist_AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spotify_Collab_Playlist_App_Spotify_Collab_Playlist_AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		111E4DC20436D1E13416065F /* Pods-Spotify-Collab-Playlist-App-Spotify-Collab-Playlist-AppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spotify-Collab-Playlist-App-Spotify-Collab-Playlist-AppUITests.debug.xcconfig"; path = "Target Support Files/Pods-Spotify-Collab-Playlist-App-Spotify-Collab-Playlist-AppUITests/Pods-Spotify-Collab-Playlist-App-Spotify-Collab-Playlist-AppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		415740B380D6AE1236EE3955 /* Pods-Spotify-Collab-Playlist-App-Spotify-Collab-Playlist-AppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spotify-Collab-Playlist-App-Spotify-Collab-Playlist-AppUITests.release.xcconfig"; path = "Target Support Files/Pods-Spotify-Collab-Playlist-App-Spotify-Collab-Playlist-AppUITests/Pods-Spotify-Collab-Playlist-App-Spotify-Collab-Playlist-AppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		41CEE3B0280A7E7E00003CAB /* CreatePlaylistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePlaylistViewController.swift; sourceTree = "<group>"; };
 		4784E5B005F506696288CEAF /* Pods_Spotify_Collab_Playlist_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spotify_Collab_Playlist_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		571EC80527FFFCBC00CC0F31 /* Spotify-Collab-Playlist-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Spotify-Collab-Playlist-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		571EC80827FFFCBC00CC0F31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 				57BA773D28093641005E44F0 /* DiscoverCell.swift */,
 				57BA773F2809380E005E44F0 /* HeaderView.swift */,
 				57BA7745280B33A8005E44F0 /* Section.swift */,
+				41CEE3B0280A7E7E00003CAB /* CreatePlaylistViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -489,6 +492,7 @@
 				57BA7746280B33A8005E44F0 /* Section.swift in Sources */,
 				571EC80927FFFCBC00CC0F31 /* AppDelegate.swift in Sources */,
 				571EC80B27FFFCBC00CC0F31 /* SceneDelegate.swift in Sources */,
+				41CEE3B1280A7E7E00003CAB /* CreatePlaylistViewController.swift in Sources */,
 				57BA77382808C4DF005E44F0 /* PFObject+RelativeDateTime.swift in Sources */,
 				57BA77362808BE61005E44F0 /* IdentifiablePFObject.swift in Sources */,
 				57BA773E28093641005E44F0 /* DiscoverCell.swift in Sources */,
