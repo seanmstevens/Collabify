@@ -194,7 +194,7 @@
                                                                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="lastBaseline" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="TZu-Kz-eWp">
                                                                                             <rect key="frame" x="0.0" y="0.0" width="374" height="21.5"/>
                                                                                             <subviews>
-                                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Playlist Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nes-yn-Jdi">
+                                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Playlist Title This Is A Long Title So We Can See How It Overflows" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nes-yn-Jdi">
                                                                                                     <rect key="frame" x="0.0" y="0.0" width="252.5" height="21.5"/>
                                                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                                                                     <nil key="textColor"/>
@@ -208,15 +208,17 @@
                                                                                                 </label>
                                                                                             </subviews>
                                                                                         </stackView>
-                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a playlist description." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ps3-Zy-kt9">
-                                                                                            <rect key="frame" x="0.0" y="25.5" width="149" height="13.5"/>
+                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a playlist description." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ps3-Zy-kt9">
+                                                                                            <rect key="frame" x="0.0" y="25.5" width="374" height="13.5"/>
                                                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                                                                             <nil key="textColor"/>
                                                                                             <nil key="highlightedColor"/>
                                                                                         </label>
                                                                                     </subviews>
                                                                                     <constraints>
+                                                                                        <constraint firstItem="Ps3-Zy-kt9" firstAttribute="leading" secondItem="7qi-xe-IuU" secondAttribute="leading" id="6eU-1e-veR"/>
                                                                                         <constraint firstItem="TZu-Kz-eWp" firstAttribute="leading" secondItem="7qi-xe-IuU" secondAttribute="leading" id="JAu-Mr-gmX"/>
+                                                                                        <constraint firstAttribute="trailing" secondItem="Ps3-Zy-kt9" secondAttribute="trailing" id="brw-tW-Nrx"/>
                                                                                         <constraint firstAttribute="trailing" secondItem="TZu-Kz-eWp" secondAttribute="trailing" id="e9z-rU-GSa"/>
                                                                                     </constraints>
                                                                                 </stackView>

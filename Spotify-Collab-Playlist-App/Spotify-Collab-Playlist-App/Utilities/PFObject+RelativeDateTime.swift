@@ -13,6 +13,6 @@ extension PFObject {
         formatter.dateTimeStyle = .named
         formatter.unitsStyle = .full
         
-        return formatter.localizedString(for: createdAt ?? Date(), relativeTo: Date())
+        return formatter.localizedString(for: date ?? Date(), relativeTo: Date())
     }
 }
