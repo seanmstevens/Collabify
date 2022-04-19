@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -111,7 +112,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MyPlaylistsCell" id="2o8-aw-i5n" customClass="MyPlaylistsCell" customModule="Spotify_Collab_Playlist_App" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="56" width="200" height="238.5"/>
+                                        <rect key="frame" x="107" y="56" width="200" height="238.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="hMc-1Q-ed2">
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="238.5"/>
@@ -126,7 +127,7 @@
                                                                 <constraint firstAttribute="width" secondItem="ziC-Df-pce" secondAttribute="height" multiplier="1:1" id="P0d-g6-MLU"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Playlist Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rd3-y8-t39">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Playlist Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rd3-y8-t39">
                                                             <rect key="frame" x="0.0" y="204" width="200" height="17"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                             <nil key="textColor"/>
@@ -163,12 +164,110 @@
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="DiscoverCell" id="CtJ-kS-tfe" customClass="DiscoverCell" customModule="Spotify_Collab_Playlist_App" customModuleProvider="target">
-                                        <rect key="frame" x="210" y="75.5" width="200" height="200"/>
+                                        <rect key="frame" x="0.0" y="304.5" width="414" height="157"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="qef-e0-v6a">
-                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="157"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c9H-Wg-yaV">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="157"/>
+                                                </imageView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sEv-tY-ydJ">
+                                                    <rect key="frame" x="0.0" y="102" width="414" height="55"/>
+                                                    <subviews>
+                                                        <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ehn-IV-L5e">
+                                                            <rect key="frame" x="0.0" y="0.0" width="414" height="55"/>
+                                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Jkc-Gh-OsI">
+                                                                <rect key="frame" x="0.0" y="0.0" width="414" height="55"/>
+                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                <subviews>
+                                                                    <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ots-vJ-yc9">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="55"/>
+                                                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="OCq-si-0ga">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="414" height="55"/>
+                                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                            <subviews>
+                                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="7qi-xe-IuU">
+                                                                                    <rect key="frame" x="20" y="8" width="374" height="39"/>
+                                                                                    <subviews>
+                                                                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="lastBaseline" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="TZu-Kz-eWp">
+                                                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="21.5"/>
+                                                                                            <subviews>
+                                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Playlist Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nes-yn-Jdi">
+                                                                                                    <rect key="frame" x="0.0" y="0.0" width="252.5" height="21.5"/>
+                                                                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                                                                    <nil key="textColor"/>
+                                                                                                    <nil key="highlightedColor"/>
+                                                                                                </label>
+                                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="999" text="Updated 2 days ago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pKF-Og-VKU">
+                                                                                                    <rect key="frame" x="260.5" y="5.5" width="113.5" height="14.5"/>
+                                                                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                                                    <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                                                                    <nil key="highlightedColor"/>
+                                                                                                </label>
+                                                                                            </subviews>
+                                                                                        </stackView>
+                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a playlist description." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ps3-Zy-kt9">
+                                                                                            <rect key="frame" x="0.0" y="25.5" width="149" height="13.5"/>
+                                                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                                                                            <nil key="textColor"/>
+                                                                                            <nil key="highlightedColor"/>
+                                                                                        </label>
+                                                                                    </subviews>
+                                                                                    <constraints>
+                                                                                        <constraint firstItem="TZu-Kz-eWp" firstAttribute="leading" secondItem="7qi-xe-IuU" secondAttribute="leading" id="JAu-Mr-gmX"/>
+                                                                                        <constraint firstAttribute="trailing" secondItem="TZu-Kz-eWp" secondAttribute="trailing" id="e9z-rU-GSa"/>
+                                                                                    </constraints>
+                                                                                </stackView>
+                                                                            </subviews>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="trailing" secondItem="7qi-xe-IuU" secondAttribute="trailing" constant="20" symbolic="YES" id="9bh-wi-fle"/>
+                                                                                <constraint firstAttribute="bottom" secondItem="7qi-xe-IuU" secondAttribute="bottom" constant="8" id="KZb-1P-krr"/>
+                                                                                <constraint firstItem="7qi-xe-IuU" firstAttribute="top" secondItem="OCq-si-0ga" secondAttribute="top" constant="8" id="Xgk-4z-z2t"/>
+                                                                                <constraint firstItem="7qi-xe-IuU" firstAttribute="leading" secondItem="OCq-si-0ga" secondAttribute="leading" constant="20" symbolic="YES" id="eHz-iI-PX3"/>
+                                                                            </constraints>
+                                                                        </view>
+                                                                        <vibrancyEffect style="label">
+                                                                            <blurEffect style="systemUltraThinMaterial"/>
+                                                                        </vibrancyEffect>
+                                                                    </visualEffectView>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="bottom" secondItem="ots-vJ-yc9" secondAttribute="bottom" id="L3T-AZ-iMN"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="ots-vJ-yc9" secondAttribute="trailing" id="jcT-Fc-jOs"/>
+                                                                    <constraint firstItem="ots-vJ-yc9" firstAttribute="top" secondItem="Jkc-Gh-OsI" secondAttribute="top" id="pD3-sR-VIJ"/>
+                                                                    <constraint firstItem="ots-vJ-yc9" firstAttribute="leading" secondItem="Jkc-Gh-OsI" secondAttribute="leading" id="sdr-6Q-eMS"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <blurEffect style="systemUltraThinMaterial"/>
+                                                        </visualEffectView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="Ehn-IV-L5e" secondAttribute="bottom" id="CYp-P6-l94"/>
+                                                        <constraint firstItem="Ehn-IV-L5e" firstAttribute="leading" secondItem="sEv-tY-ydJ" secondAttribute="leading" id="a3t-72-UvC"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Ehn-IV-L5e" secondAttribute="trailing" id="ovv-DV-oD3"/>
+                                                        <constraint firstItem="Ehn-IV-L5e" firstAttribute="top" secondItem="sEv-tY-ydJ" secondAttribute="top" id="sDy-Ah-xx9"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="sEv-tY-ydJ" secondAttribute="bottom" id="63k-Nk-v9t"/>
+                                                <constraint firstItem="sEv-tY-ydJ" firstAttribute="leading" secondItem="qef-e0-v6a" secondAttribute="leading" id="JVE-Ch-cFZ"/>
+                                                <constraint firstAttribute="bottom" secondItem="c9H-Wg-yaV" secondAttribute="bottom" id="M0A-5a-FPf"/>
+                                                <constraint firstItem="c9H-Wg-yaV" firstAttribute="top" secondItem="qef-e0-v6a" secondAttribute="top" id="UoE-Wu-Tyi"/>
+                                                <constraint firstItem="c9H-Wg-yaV" firstAttribute="leading" secondItem="qef-e0-v6a" secondAttribute="leading" id="YWs-yZ-Tzb"/>
+                                                <constraint firstAttribute="trailing" secondItem="sEv-tY-ydJ" secondAttribute="trailing" id="eyq-Tf-djT"/>
+                                                <constraint firstAttribute="trailing" secondItem="c9H-Wg-yaV" secondAttribute="trailing" id="o2f-jJ-FOy"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
+                                        <size key="customSize" width="414" height="157"/>
+                                        <connections>
+                                            <outlet property="playlistDescriptionLabel" destination="Ps3-Zy-kt9" id="BJS-Ry-xKX"/>
+                                            <outlet property="playlistImageView" destination="c9H-Wg-yaV" id="I7H-HC-EdZ"/>
+                                            <outlet property="playlistTitleLabel" destination="nes-yn-Jdi" id="McG-al-eKZ"/>
+                                            <outlet property="updatedTimeLabel" destination="pKF-Og-VKU" id="3Os-2Y-iDu"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="HeaderView" id="H9T-lR-5DX" customClass="HeaderView" customModule="Spotify_Collab_Playlist_App" customModuleProvider="target">
@@ -201,8 +300,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="GHf-5m-u3y">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="person.circle" catalog="system" id="9M9-vf-pWE"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="person.circle" catalog="system" id="9M9-vf-pWE">
+                            <color key="tintColor" name="green-accent"/>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="N9q-Jm-abS">
+                            <color key="tintColor" name="green-accent"/>
                             <connections>
                                 <segue destination="2ck-UB-Cq3" kind="presentation" id="dFF-qR-U0Y"/>
                             </connections>
@@ -314,6 +416,9 @@
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="person.circle" catalog="system" width="128" height="121"/>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <namedColor name="green-accent">
+            <color red="0.11372549019607843" green="0.72549019607843135" blue="0.32941176470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
