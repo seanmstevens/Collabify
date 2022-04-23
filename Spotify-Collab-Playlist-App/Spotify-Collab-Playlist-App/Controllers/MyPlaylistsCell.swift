@@ -17,11 +17,12 @@ class MyPlaylistsCell: UICollectionViewCell {
         didSet {
             titleLabel.text = playlist.title
             contributorsLabel.text = String(playlist.contributors.count) + " contributor" + (playlist.contributors.count != 1 ? "s" : "")
-            imageView.layer.cornerRadius = 8
+            imageView.layer.cornerRadius = 12
             
             if let url = playlist.image?.url {
                 imageView.af.setImage(withURL: URL(string: url)!, imageTransition: .crossDissolve(0.16))
             }
         }
     }
+    
 }

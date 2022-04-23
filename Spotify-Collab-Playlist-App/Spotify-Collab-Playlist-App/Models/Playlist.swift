@@ -16,14 +16,6 @@ class Playlist: IdentifiablePFObject {
     @NSManaged var tracks: [Track]?
     @NSManaged var isUnderVote: Bool
     @NSManaged var voteCount: Int
-    
-    func contains(query: String?) -> Bool {
-        guard let query = query, !query.isEmpty else {
-            return true
-        }
-
-        return title.range(of: query, options: .caseInsensitive) != nil || desc?.range(of: query, options: .caseInsensitive) != nil
-    }
 }
 
 extension Playlist: PFSubclassing {

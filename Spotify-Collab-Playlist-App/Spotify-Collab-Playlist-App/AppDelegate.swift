@@ -16,12 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        UIBarButtonItem.appearance().setTitleTextAttributes([.foregroundColor: UIColor(named: "green-accent") ?? .systemGreen], for: .normal)
-        UIBarButtonItem.appearance().tintColor = .init(named: "green-accent")
-        
-//        UIBarButtonItem.appearance(whenContainedInInstancesOf: [UISearchBar.self]).setTitleTextAttributes([.foregroundColor: UIColor(named: "green-accent") ?? .systemGreen], for: .normal)
-//        UIBarButtonItem.appearance(whenContainedInInstancesOf: [UISearchBar.self]).tintColor = .init(named: "green-accent")
-        
         let parseConfig = ParseClientConfiguration {
             $0.applicationId = APP_ID
             $0.clientKey = CLIENT_KEY
