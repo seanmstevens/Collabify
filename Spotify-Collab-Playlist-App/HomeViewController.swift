@@ -188,7 +188,7 @@ extension HomeViewController {
     
     private func retrievePlaylists(animatingDifferences: Bool = true) {
         let query = Playlist.query()!
-        query.includeKeys(["contributors", "tracks"])
+        query.includeKeys(["contributors", "tracks", "pendingTracks"])
         query.limit = playlistsToRetrieve
         
         query.findObjectsInBackground { playlists, error in

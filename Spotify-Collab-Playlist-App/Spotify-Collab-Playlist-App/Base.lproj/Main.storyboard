@@ -216,7 +216,7 @@
         <!--Playlist View Controller-->
         <scene sceneID="1UC-aN-cb4">
             <objects>
-                <viewController id="tra-h5-7Dc" customClass="PlaylistViewController" customModule="Spotify_Collab_Playlist_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="tra-h5-7Dc" customClass="PlaylistViewController" customModule="Spotify_Collab_Playlist_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="66F-6E-Z2C">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -233,9 +233,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="3cX-OI-8oL">
-                                <rect key="frame" x="0.0" y="463" width="414" height="433"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="3cX-OI-8oL">
+                                <rect key="frame" x="0.0" y="453" width="414" height="443"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="songCell" rowHeight="103" id="xFv-80-BGX" customClass="SongTableViewCell" customModule="Spotify_Collab_Playlist_App" customModuleProvider="target">
@@ -296,21 +295,45 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="0Xh-PX-By3">
+                                <rect key="frame" x="8" y="414" width="398" height="32"/>
+                                <segments>
+                                    <segment title="Songs"/>
+                                    <segment title="Pending"/>
+                                    <segment title="Users"/>
+                                </segments>
+                                <connections>
+                                    <action selector="viewSwitch:" destination="tra-h5-7Dc" eventType="valueChanged" id="Lss-su-Kxu"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qxv-1V-4hR">
+                                <rect key="frame" x="356" y="370" width="38" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="plus" catalog="system"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tt0-fv-ukb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="rCQ-n0-Pfv" firstAttribute="top" secondItem="66F-6E-Z2C" secondAttribute="top" id="3DT-T1-Jqi"/>
                             <constraint firstItem="9gU-Kc-FzE" firstAttribute="top" secondItem="rCQ-n0-Pfv" secondAttribute="bottom" constant="8" id="3pV-Wf-Zh2"/>
+                            <constraint firstItem="3cX-OI-8oL" firstAttribute="top" secondItem="0Xh-PX-By3" secondAttribute="bottom" constant="8" id="4j1-b3-kjw"/>
                             <constraint firstItem="3Vp-NB-Dw5" firstAttribute="top" secondItem="tt0-fv-ukb" secondAttribute="top" constant="200" id="9qA-Mv-H2m"/>
+                            <constraint firstItem="0Xh-PX-By3" firstAttribute="top" secondItem="9gU-Kc-FzE" secondAttribute="bottom" constant="8" id="AEz-gb-pBV"/>
                             <constraint firstItem="tt0-fv-ukb" firstAttribute="trailing" secondItem="9gU-Kc-FzE" secondAttribute="trailing" constant="16" id="CFS-F6-KiN"/>
+                            <constraint firstItem="3cX-OI-8oL" firstAttribute="leading" secondItem="rCQ-n0-Pfv" secondAttribute="leading" id="D22-4a-Hee"/>
+                            <constraint firstItem="3cX-OI-8oL" firstAttribute="trailing" secondItem="rCQ-n0-Pfv" secondAttribute="trailing" id="NGZ-7n-OCs"/>
                             <constraint firstItem="3Vp-NB-Dw5" firstAttribute="leading" secondItem="tt0-fv-ukb" secondAttribute="leading" constant="16" id="PGY-TN-e4h"/>
                             <constraint firstItem="9gU-Kc-FzE" firstAttribute="top" relation="greaterThanOrEqual" secondItem="3Vp-NB-Dw5" secondAttribute="bottom" constant="16" id="QEm-Ym-VA5"/>
+                            <constraint firstItem="tt0-fv-ukb" firstAttribute="trailing" secondItem="0Xh-PX-By3" secondAttribute="trailing" constant="8" id="RZG-yw-I9Q"/>
                             <constraint firstItem="9gU-Kc-FzE" firstAttribute="centerX" secondItem="rCQ-n0-Pfv" secondAttribute="centerX" id="XpB-Mk-hhz"/>
+                            <constraint firstItem="0Xh-PX-By3" firstAttribute="leading" secondItem="tt0-fv-ukb" secondAttribute="leading" constant="8" id="YMb-gs-w8X"/>
                             <constraint firstItem="9gU-Kc-FzE" firstAttribute="top" secondItem="rCQ-n0-Pfv" secondAttribute="bottom" constant="8" symbolic="YES" id="hFb-SO-mIC"/>
                             <constraint firstItem="9gU-Kc-FzE" firstAttribute="leading" secondItem="tt0-fv-ukb" secondAttribute="leading" constant="16" id="hyJ-ei-nGS"/>
                             <constraint firstItem="rCQ-n0-Pfv" firstAttribute="leading" secondItem="66F-6E-Z2C" secondAttribute="leading" id="oVa-4C-ODD"/>
                             <constraint firstItem="tt0-fv-ukb" firstAttribute="trailing" secondItem="3Vp-NB-Dw5" secondAttribute="trailing" constant="16" id="osl-Ly-gAi"/>
+                            <constraint firstAttribute="bottom" secondItem="3cX-OI-8oL" secondAttribute="bottom" id="sea-uf-Fra"/>
                             <constraint firstItem="tt0-fv-ukb" firstAttribute="bottom" secondItem="9gU-Kc-FzE" secondAttribute="bottom" constant="407" id="y5G-GB-bGJ"/>
                         </constraints>
                     </view>
