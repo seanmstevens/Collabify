@@ -32,7 +32,7 @@ class CreatePlaylistViewController: UIViewController, UIImagePickerControllerDel
         playlist.image = file
         playlist.title = playlistNameField.text!
         playlist.desc = playlistDescriptionView.text!
-//        playlist["author"] = PFUser.current()!
+        playlist["author"] = PFUser.current()!
         
         playlist.saveInBackground { (success, error) in
             if success {
