@@ -29,6 +29,11 @@
 		57BA77442809E6DC005E44F0 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BA77432809E6DC005E44F0 /* Secrets.swift */; };
 		57BA7746280B33A8005E44F0 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BA7745280B33A8005E44F0 /* Section.swift */; };
 		57BA7749280DBA39005E44F0 /* loader.json in Resources */ = {isa = PBXBuildFile; fileRef = 57BA7748280DBA39005E44F0 /* loader.json */; };
+		57BA774B280F8F43005E44F0 /* TrackSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BA774A280F8F43005E44F0 /* TrackSearchViewController.swift */; };
+		57BA774D2811D3FC005E44F0 /* SpotifyAPICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BA774C2811D3FC005E44F0 /* SpotifyAPICaller.swift */; };
+		57BA775328137B16005E44F0 /* RawServerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BA775228137B16005E44F0 /* RawServerResponse.swift */; };
+		57BA775528138520005E44F0 /* TrackSearchResultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BA775428138520005E44F0 /* TrackSearchResultsController.swift */; };
+		57BA77572813885D005E44F0 /* TrackSearchResultsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BA77562813885D005E44F0 /* TrackSearchResultsCell.swift */; };
 		6285079328012D59006D6A23 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6285079228012D59006D6A23 /* HomeViewController.swift */; };
 		6285079528012E7D006D6A23 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6285079428012E7D006D6A23 /* SearchViewController.swift */; };
 		6285079728012EA9006D6A23 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6285079628012EA9006D6A23 /* ProfileViewController.swift */; };
@@ -81,6 +86,11 @@
 		57BA77432809E6DC005E44F0 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Secrets.swift; path = "Spotify-Collab-Playlist-App/Secrets.swift"; sourceTree = SOURCE_ROOT; };
 		57BA7745280B33A8005E44F0 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		57BA7748280DBA39005E44F0 /* loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loader.json; sourceTree = "<group>"; };
+		57BA774A280F8F43005E44F0 /* TrackSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackSearchViewController.swift; sourceTree = "<group>"; };
+		57BA774C2811D3FC005E44F0 /* SpotifyAPICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SpotifyAPICaller.swift; path = "Spotify-Collab-Playlist-App/Controllers/SpotifyAPICaller.swift"; sourceTree = SOURCE_ROOT; };
+		57BA775228137B16005E44F0 /* RawServerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawServerResponse.swift; sourceTree = "<group>"; };
+		57BA775428138520005E44F0 /* TrackSearchResultsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackSearchResultsController.swift; sourceTree = "<group>"; };
+		57BA77562813885D005E44F0 /* TrackSearchResultsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackSearchResultsCell.swift; sourceTree = "<group>"; };
 		59CB026F2C59406F47E4BD6A /* Pods-Spotify-Collab-Playlist-AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spotify-Collab-Playlist-AppTests.release.xcconfig"; path = "Target Support Files/Pods-Spotify-Collab-Playlist-AppTests/Pods-Spotify-Collab-Playlist-AppTests.release.xcconfig"; sourceTree = "<group>"; };
 		6285079228012D59006D6A23 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = SOURCE_ROOT; };
 		6285079428012E7D006D6A23 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -206,6 +216,9 @@
 				57BA773F2809380E005E44F0 /* HeaderView.swift */,
 				57BA7745280B33A8005E44F0 /* Section.swift */,
 				41CEE3B0280A7E7E00003CAB /* CreatePlaylistViewController.swift */,
+				57BA774A280F8F43005E44F0 /* TrackSearchViewController.swift */,
+				57BA775428138520005E44F0 /* TrackSearchResultsController.swift */,
+				57BA77562813885D005E44F0 /* TrackSearchResultsCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -214,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				57BA77432809E6DC005E44F0 /* Secrets.swift */,
+				57BA774C2811D3FC005E44F0 /* SpotifyAPICaller.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -224,6 +238,7 @@
 				57BA77352808BE61005E44F0 /* IdentifiablePFObject.swift */,
 				57BA77372808C4DF005E44F0 /* PFObject+RelativeDateTime.swift */,
 				57BA773B280935EA005E44F0 /* UICollectionReusableView+ReuseIdentifier.swift */,
+				57BA775228137B16005E44F0 /* RawServerResponse.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -489,18 +504,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57BA774B280F8F43005E44F0 /* TrackSearchViewController.swift in Sources */,
 				57BA7746280B33A8005E44F0 /* Section.swift in Sources */,
+				57BA775528138520005E44F0 /* TrackSearchResultsController.swift in Sources */,
 				571EC80927FFFCBC00CC0F31 /* AppDelegate.swift in Sources */,
 				571EC80B27FFFCBC00CC0F31 /* SceneDelegate.swift in Sources */,
 				41CEE3B1280A7E7E00003CAB /* CreatePlaylistViewController.swift in Sources */,
 				57BA77382808C4DF005E44F0 /* PFObject+RelativeDateTime.swift in Sources */,
 				57BA77362808BE61005E44F0 /* IdentifiablePFObject.swift in Sources */,
 				57BA773E28093641005E44F0 /* DiscoverCell.swift in Sources */,
+				57BA774D2811D3FC005E44F0 /* SpotifyAPICaller.swift in Sources */,
+				57BA775328137B16005E44F0 /* RawServerResponse.swift in Sources */,
 				57BA773C280935EA005E44F0 /* UICollectionReusableView+ReuseIdentifier.swift in Sources */,
 				6285079728012EA9006D6A23 /* ProfileViewController.swift in Sources */,
 				6285079528012E7D006D6A23 /* SearchViewController.swift in Sources */,
 				6285079328012D59006D6A23 /* HomeViewController.swift in Sources */,
 				57BA77442809E6DC005E44F0 /* Secrets.swift in Sources */,
+				57BA77572813885D005E44F0 /* TrackSearchResultsCell.swift in Sources */,
 				57BA77302808BA2E005E44F0 /* Playlist.swift in Sources */,
 				57BA77322808BDCF005E44F0 /* Track.swift in Sources */,
 				57BA773A280935BD005E44F0 /* MyPlaylistsCell.swift in Sources */,
@@ -690,6 +710,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -720,6 +741,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
