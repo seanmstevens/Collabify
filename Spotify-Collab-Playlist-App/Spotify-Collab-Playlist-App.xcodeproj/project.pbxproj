@@ -31,6 +31,8 @@
 		6285079728012EA9006D6A23 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6285079628012EA9006D6A23 /* ProfileViewController.swift */; };
 		9762A13D27B8E07263015B18 /* Pods_Spotify_Collab_Playlist_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748AB03A5705FD27108A8BC9 /* Pods_Spotify_Collab_Playlist_AppTests.framework */; };
 		B1480356280A0E3C002F11BF /* PlaylistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1480355280A0E3C002F11BF /* PlaylistViewController.swift */; };
+		B148035A280A8AE4002F11BF /* SongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1480359280A8AE4002F11BF /* SongTableViewCell.swift */; };
+		B148035C280B385C002F11BF /* PlaylistTableViewControllerNotInUse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B148035B280B385C002F11BF /* PlaylistTableViewControllerNotInUse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +86,8 @@
 		748AB03A5705FD27108A8BC9 /* Pods_Spotify_Collab_Playlist_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spotify_Collab_Playlist_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		894193B609B01AC8A314465D /* Pods-Spotify-Collab-Playlist-AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spotify-Collab-Playlist-AppTests.debug.xcconfig"; path = "Target Support Files/Pods-Spotify-Collab-Playlist-AppTests/Pods-Spotify-Collab-Playlist-AppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B1480355280A0E3C002F11BF /* PlaylistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistViewController.swift; sourceTree = "<group>"; };
+		B1480359280A8AE4002F11BF /* SongTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
+		B148035B280B385C002F11BF /* PlaylistTableViewControllerNotInUse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistTableViewControllerNotInUse.swift; sourceTree = "<group>"; };
 		D9F650853734F703AD64B92D /* Pods-Spotify-Collab-Playlist-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spotify-Collab-Playlist-App.release.xcconfig"; path = "Target Support Files/Pods-Spotify-Collab-Playlist-App/Pods-Spotify-Collab-Playlist-App.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -200,6 +204,8 @@
 				57BA773D28093641005E44F0 /* DiscoverCell.swift */,
 				57BA773F2809380E005E44F0 /* HeaderView.swift */,
 				B1480355280A0E3C002F11BF /* PlaylistViewController.swift */,
+				B1480359280A8AE4002F11BF /* SongTableViewCell.swift */,
+				B148035B280B385C002F11BF /* PlaylistTableViewControllerNotInUse.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -486,7 +492,9 @@
 				57BA77442809E6DC005E44F0 /* Secrets.swift in Sources */,
 				57BA77302808BA2E005E44F0 /* Playlist.swift in Sources */,
 				B1480356280A0E3C002F11BF /* PlaylistViewController.swift in Sources */,
+				B148035A280A8AE4002F11BF /* SongTableViewCell.swift in Sources */,
 				57BA77322808BDCF005E44F0 /* Track.swift in Sources */,
+				B148035C280B385C002F11BF /* PlaylistTableViewControllerNotInUse.swift in Sources */,
 				57BA773A280935BD005E44F0 /* MyPlaylistsCell.swift in Sources */,
 				57BA77402809380E005E44F0 /* HeaderView.swift in Sources */,
 			);
