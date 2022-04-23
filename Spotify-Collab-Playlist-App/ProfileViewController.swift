@@ -27,9 +27,10 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         super.viewDidAppear(animated)
         let user = PFUser.current()!
         
-        let imageFile = user["profileImage"] as! PFFileObject
-        let url = URL(string: imageFile.url!)!
-        profileImage.af.setImage(withURL: url)
+        if let imageFile = user["profileImage"] as? PFFileObject {
+            let url = URL(string: imageFile.url!)!
+            profileImage.af.setImage(withURL: url)
+        }
         userName.text = user.username
         userEmail.text = user.email
 //        userPassword.text = user.password
