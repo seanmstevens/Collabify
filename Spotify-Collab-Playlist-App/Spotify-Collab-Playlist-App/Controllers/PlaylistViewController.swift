@@ -25,7 +25,8 @@ class PlaylistViewController: UIViewController, UITableViewDataSource, UITableVi
     
     var playlist: Playlist!
     var songlist: Array<Any>!
-    var songs = [Track]()
+    var songs = [PFObject]()
+    var trackList: [Track]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,19 +44,36 @@ class PlaylistViewController: UIViewController, UITableViewDataSource, UITableVi
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-//        let query = PFQuery(className: "Track")
-//        query.includeKey("artists")
-//        query.limit = 20
+        // find songs with spotifyID in the track array in the current playlist
+        
+        var playlistId: String!
+        
+        playlistId = playlist.objectId ?? ""
 //
-//        query.findObjectsInBackground { (song, error) in
-//            if song != nil {
-//                self.song = song!
-//                self.songlistTableView.reloadData()
-//
-//            }
+//        for song in songlist {
+//            trackList.append(song["objectId"])
 //        }
-        songlist = playlist.tracks
+//
+        let query = PFQuery(className: "Playlist")
+        query.whereKey("objectId", equalTo: playlistId)
+        query.includeKey("tracks")
+        query.limit = 20
+
+        query.findObjectsInBackground { (playlists, error) in
+            if playlists != nil {
+                let playlist = playlists![0] as PFObject
+                self.songs = (playlist["tracks"] as? [PFObject]) ?? []
+                self.songlistTableView.reloadData()
+
+            }
+        }
+//        for song in songs {
+//            trackList.append(song)
+//        }
+        
         print(songlist)
+        
+
         
         self.songlistTableView.reloadData()
         
@@ -66,7 +84,12 @@ class PlaylistViewController: UIViewController, UITableViewDataSource, UITableVi
         let cell = tableView.dequeueReusableCell(withIdentifier: "songCell", for: indexPath as IndexPath) as! SongTableViewCell
         
         let song = songs[indexPath.row]
-        cell.song = song
+//        cell.song = song
+        cell.songnameLabel.text = song["title"] as! String
+        cell.artistLabel.text = song["artists"] as! String
+        if let url = song["imageURL"] {
+            cell.songImageView?.af.setImage(withURL: URL(string: url as! String)!, imageTransition: .crossDissolve(0.16))
+        }
         
         return cell
         
