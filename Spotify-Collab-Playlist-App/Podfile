@@ -9,6 +9,7 @@ target 'Spotify-Collab-Playlist-App' do
   pod 'AlamofireImage'
   pod 'Parse'
   pod 'lottie-ios'
+  pod 'OAuthSwift'
 
   target 'Spotify-Collab-Playlist-AppTests' do
     inherit! :search_paths

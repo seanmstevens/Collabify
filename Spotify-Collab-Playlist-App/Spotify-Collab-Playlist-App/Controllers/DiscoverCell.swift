@@ -23,7 +23,7 @@ class DiscoverCell: UICollectionViewCell {
             
             if let url = playlist.image?.url {
                 playlistImageView.contentMode = .scaleAspectFill
-                playlistImageView.af.setImage(withURL: URL(string: url)!, imageTransition: .crossDissolve(0.16))
+                playlistImageView.af.setImage(withURL: URL(string: url)!, placeholderImage: .init(named: "playlist-placeholder"), imageTransition: .crossDissolve(0.16))
             }
         }
     }

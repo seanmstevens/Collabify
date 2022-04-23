@@ -28,6 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             $0.server = "https://parseapi.back4app.com"
         }
         
+        _ = SpotifyAPICaller.shared
+        
         Parse.initialize(with: parseConfig)
         return true
     }
