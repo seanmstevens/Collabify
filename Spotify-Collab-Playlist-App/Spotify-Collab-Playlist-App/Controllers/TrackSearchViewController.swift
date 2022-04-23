@@ -12,27 +12,35 @@ class TrackSearchViewController: UIViewController, UICollectionViewDelegate, UIC
     
     var searchController: UISearchController?
     private var searchResultsController: TrackSearchResultsController!
+    var playlist: Playlist?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureSearchBar()
         configurationCollectionView()
-        
         collectionView.reloadData()
     }
     
     private func configurationCollectionView() {
-        let flowLayout: UICollectionViewFlowLayout = {
-            let layout = UICollectionViewFlowLayout()
-            layout.minimumInteritemSpacing = 8
-            layout.minimumLineSpacing = 8
-            layout.sectionInset = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
-            return layout
-        }()
-        
-        collectionView.collectionViewLayout = flowLayout
+        collectionView.collectionViewLayout = generateLayout()
         collectionView.delegate = self
         collectionView.dataSource = self
+    }
+    
+    private func generateLayout() -> UICollectionViewLayout {
+        let fraction: CGFloat = 1/2
+        let inset: CGFloat = 6
+        
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(fraction), heightDimension: .fractionalHeight(1))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        item.contentInsets = NSDirectionalEdgeInsets(top: inset, leading: inset, bottom: inset, trailing: inset)
+        
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalWidth(fraction))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+        
+        let section = NSCollectionLayoutSection(group: group)
+        section.contentInsets = NSDirectionalEdgeInsets(top: inset, leading: inset, bottom: inset, trailing: inset)
+        return UICollectionViewCompositionalLayout(section: section)
     }
     
     
@@ -51,11 +59,18 @@ class TrackSearchViewController: UIViewController, UICollectionViewDelegate, UIC
         cell.genre = TrackSearchViewController.genres[indexPath.item]
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        searchController?.isActive = true
+        searchController?.searchBar.text = "genre:\(TrackSearchViewController.genres[indexPath.item].lowercased())"
+    }
 }
 
 extension TrackSearchViewController {
     private func configureSearchBar() {
         searchResultsController = (storyboard?.instantiateViewController(withIdentifier: "TrackSearchResultsController") as! TrackSearchResultsController)
+        searchResultsController.playlist = playlist
+        
         searchController = UISearchController(searchResultsController: searchResultsController)
         searchController?.searchResultsUpdater = searchResultsController
         searchController?.obscuresBackgroundDuringPresentation = true

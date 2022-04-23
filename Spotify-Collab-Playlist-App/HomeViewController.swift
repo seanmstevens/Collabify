@@ -186,16 +186,18 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        // Only need to prepare when the cell is selected, not the playlist creation button
+        if let destination = segue.destination as? PlaylistViewController {
+            let cell = sender as! UICollectionViewCell
+            let indexPath = collectionView.indexPath(for: cell)!
+            guard let playlist = dataSource.itemIdentifier(for: indexPath) else { return }
+            
+            destination.playlist = playlist
+        }
     }
-    */
-
 }
 
 extension HomeViewController {
@@ -210,8 +212,8 @@ extension HomeViewController {
     ) {
         guard requestTimestamp == nil else { return }
         
-        let discoverPlaylistsQuery = Playlist.query()!.includeKeys(["contributors", "tracks"]).order(byDescending: "createdAt")
-        let myPlaylistsQuery = Playlist.query()!.includeKeys(["contributors", "tracks"]).order(byDescending: "createdAt")
+        let discoverPlaylistsQuery = Playlist.query()!.includeKeys(["contributors", "tracks", "pendingTracks"]).order(byDescending: "createdAt")
+        let myPlaylistsQuery = Playlist.query()!.includeKeys(["contributors", "tracks", "pendingTracks"]).order(byDescending: "createdAt")
         discoverPlaylistsQuery.limit = playlistsToRetrieve
         myPlaylistsQuery.limit = playlistsToRetrieve
         

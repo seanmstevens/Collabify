@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Parse
 
 class TrackSearchResultsController: UICollectionViewController {
     enum Section {
@@ -66,13 +67,16 @@ class TrackSearchResultsController: UICollectionViewController {
         if let playlist = playlist {
             collectionView.isUserInteractionEnabled = false
             let track = filteredTracks[indexPath.item]
-            playlist.addUniqueObject(track, forKey: "tracks")
+            print(track.title)
+            playlist.addUniqueObject(track, forKey: "pendingTracks")
             
             playlist.saveInBackground { success, error in
                 if let error = error {
                     print("Unable to save track to playlist: \(error.localizedDescription)")
                 } else if success {
                     print("Saved track to playlist!")
+                    self.performSegue(withIdentifier: "unwindToPlaylistViewController", sender: self)
+                    NotificationCenter.default.post(name: NSNotification.Name("TrackSelected"), object: nil)
                 }
                 
                 collectionView.isUserInteractionEnabled = true

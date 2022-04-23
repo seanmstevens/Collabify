@@ -16,7 +16,7 @@ class MyPlaylistsCell: UICollectionViewCell {
     var playlist: Playlist! {
         didSet {
             titleLabel.text = playlist.title
-            contributorsLabel.text = String(playlist.contributors.count) + " contributor" + (playlist.contributors.count != 1 ? "s" : "")
+            contributorsLabel.text = String(playlist.contributors?.count ?? 0) + " contributor" + (playlist.contributors?.count != 1 ? "s" : "")
             imageView.layer.cornerRadius = 8
             
             if let url = playlist.image?.url {
