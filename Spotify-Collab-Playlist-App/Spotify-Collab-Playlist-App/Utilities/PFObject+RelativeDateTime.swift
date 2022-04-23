@@ -8,11 +8,11 @@
 import Parse
 
 extension PFObject {
-    func getRelativeDateTimeString() -> String {
+    func getRelativeDateTimeString(for date: Date?) -> String {
         let formatter = RelativeDateTimeFormatter()
         formatter.dateTimeStyle = .named
         formatter.unitsStyle = .full
         
-        return formatter.localizedString(for: createdAt ?? Date(), relativeTo: Date())
+        return formatter.localizedString(for: date ?? Date(), relativeTo: Date())
     }
 }
