@@ -345,22 +345,6 @@
             </objects>
             <point key="canvasLocation" x="2030" y="-684"/>
         </scene>
-        <!--Search View Controller-->
-        <scene sceneID="Mbu-y9-mIA">
-            <objects>
-                <viewController title="SearchViewController" id="IG9-1R-Zny" userLabel="Search View Controller" customClass="SearchViewController" customModule="Spotify_Collab_Playlist_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="hrI-oR-Lfl">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="HSb-ut-rLC"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="9v5-ga-8GZ"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JFD-F3-Sme" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3103" y="206"/>
-        </scene>
         <!--Profile View Controller-->
         <scene sceneID="w5H-aG-qUX">
             <objects>
@@ -444,7 +428,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="6OX-sP-j6g" kind="relationship" relationship="viewControllers" id="FL1-ei-RdA"/>
-                        <segue destination="IG9-1R-Zny" kind="relationship" relationship="viewControllers" id="tvp-1g-T59"/>
+                        <segue destination="MGy-ka-6HI" kind="relationship" relationship="viewControllers" id="nrX-x7-rrq"/>
                         <segue destination="eM7-Sg-UWv" kind="relationship" relationship="viewControllers" id="mhh-PZ-LIz"/>
                     </connections>
                 </tabBarController>
@@ -694,7 +678,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cNN-t4-McC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2330.434782608696" y="970.98214285714278"/>
+            <point key="canvasLocation" x="1459" y="990"/>
         </scene>
         <!--Create Playlist View Controller-->
         <scene sceneID="tjp-fX-dBr">
@@ -704,7 +688,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="hS0-8a-aJ1">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="playlist-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="hS0-8a-aJ1">
                                 <rect key="frame" x="107" y="138" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
@@ -784,7 +768,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3134.7826086956525" y="970.98214285714278"/>
+            <point key="canvasLocation" x="2264" y="990"/>
         </scene>
         <!--Track Search View Controller-->
         <scene sceneID="1XQ-90-5MQ">
@@ -826,7 +810,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GDN-cY-hZW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3240.579710144928" y="1731.0267857142856"/>
+            <point key="canvasLocation" x="3103" y="990"/>
         </scene>
         <!--Track Search Results Controller-->
         <scene sceneID="jsj-vH-tX1">
@@ -908,12 +892,13 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w9R-kx-4gI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4292.753623188406" y="1730.3571428571429"/>
+            <point key="canvasLocation" x="3103" y="1704"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="COq-Ds-DWu">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" interfaceStyle="dark" id="MGy-ka-6HI" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="search" id="igp-UY-a0e"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="IeG-Cd-bwP">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -926,14 +911,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cyM-p4-MKJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2330.434782608696" y="1731.0267857142856"/>
+            <point key="canvasLocation" x="3103" y="206"/>
         </scene>
     </scenes>
     <resources>
         <image name="house" catalog="system" width="128" height="106"/>
-        <image name="image_placeholder" width="375" height="375"/>
         <image name="logo" width="1644" height="1644"/>
-        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="person.circle" catalog="system" width="128" height="121"/>
         <image name="playlist-placeholder" width="180" height="180"/>
