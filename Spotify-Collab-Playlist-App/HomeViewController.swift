@@ -34,6 +34,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
     
     let searchController = UISearchController(searchResultsController: nil)
     var animationView: AnimationView?
+    @IBOutlet weak var profileButtonItem: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
