@@ -7,6 +7,7 @@
 
 import UIKit
 import OAuthSwift
+import Parse
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -18,6 +19,43 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+        
+        NotificationCenter.default.addObserver(forName: Notification.Name("create_account"),
+                                               object: nil,
+                                               queue: .main) { Notification in
+            self.presentSignupViewController()
+        }
+        
+        NotificationCenter.default.addObserver(forName: Notification.Name("login_screen"),
+                                               object: nil,
+                                               queue: .main) { Notification in
+            self.presentLoginViewController()
+        }
+        NotificationCenter.default.addObserver(forName: Notification.Name("login"),
+                                               object: nil,
+                                               queue: .main) { Notification in
+            self.presentHomeViewController()
+        }
+       
+        if (PFUser.current() == nil) {
+            presentLoginViewController()
+        }
+    }
+    
+    func presentHomeViewController() {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        self.window?.rootViewController = storyBoard.instantiateViewController(withIdentifier: "HomeTabBarController")
+    }
+    
+    func presentSignupViewController() {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        self.window?.rootViewController = storyBoard.instantiateViewController(withIdentifier: "SignupViewController")
+    }
+
+    
+    func presentLoginViewController() {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        self.window?.rootViewController = storyBoard.instantiateViewController(withIdentifier: "LoginViewController")
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
