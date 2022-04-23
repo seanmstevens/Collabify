@@ -20,7 +20,7 @@ class MyPlaylistsCell: UICollectionViewCell {
             imageView.layer.cornerRadius = 8
             
             if let url = playlist.image?.url {
-                imageView.af.setImage(withURL: URL(string: url)!, imageTransition: .crossDissolve(0.16))
+                imageView.af.setImage(withURL: URL(string: url)!, placeholderImage: .init(named: "playlist-placeholder"), imageTransition: .crossDissolve(0.16))
             }
         }
     }

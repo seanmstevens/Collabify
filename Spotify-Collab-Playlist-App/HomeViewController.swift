@@ -107,9 +107,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
         snapshot.appendSections([.discover])
         snapshot.appendItems(filteredDiscoverPlaylists, toSection: .discover)
         
-        dataSource.apply(snapshot, animatingDifferences: animatingDifferences) {
-            print("Applied snapshot")
-        }
+        dataSource.apply(snapshot, animatingDifferences: animatingDifferences)
     }
     
     private func configureCollectionView() {
@@ -124,6 +122,11 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
     
     private func generateLayout() -> UICollectionViewLayout {
         let layout = UICollectionViewCompositionalLayout { sectionIndex, layoutEnvironment in
+            // Return dummy section if there are no elements in the section.
+            guard self.dataSource.snapshot().numberOfItems(inSection: Section.allCases[sectionIndex]) > 0 else {
+                return self.generateDummySection()
+            }
+            
             let isWideView = layoutEnvironment.container.effectiveContentSize.width > 500
             
             let sectionLayoutKind = Section.allCases[sectionIndex]
@@ -136,12 +139,19 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
         return layout
     }
     
+    private func generateDummySection() -> NSCollectionLayoutSection {
+        let item = NSCollectionLayoutItem(layoutSize: .init(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0)))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: .init(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(0.01)), subitems: [item])
+        
+        return NSCollectionLayoutSection(group: group)
+    }
+    
     private func generateMyPlaylistsLayout(isWide: Bool, numItems: Int) -> NSCollectionLayoutSection {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(1))
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(200))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
         let groupFractionalWidth = isWide ? 0.95 / 4 : 0.95 / 2
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(groupFractionalWidth), heightDimension: .estimated(1))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(groupFractionalWidth), heightDimension: .estimated(200))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 1)
         group.contentInsets.leading = 8
         group.contentInsets.trailing = 8
@@ -189,7 +199,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
 
 extension HomeViewController {
     @objc private func refreshFeed() {
-        retrievePlaylists(since: myPlaylists.first?.createdAt)
+        retrievePlaylists(since: max(myPlaylists.first?.createdAt ?? Date.distantPast, discoverPlaylists.first?.createdAt ?? Date.distantPast))
     }
     
     private func retrievePlaylists(
@@ -212,8 +222,8 @@ extension HomeViewController {
             myPlaylistsQuery.whereKey("createdAt", lessThan: maxTime)
         }
         
-        discoverPlaylistsQuery.whereKey("contributors", notEqualTo: PFUser.current())
-        myPlaylistsQuery.whereKey("contributors", equalTo: PFUser.current())
+        discoverPlaylistsQuery.whereKey("contributors", notEqualTo: PFUser.current() as Any)
+        myPlaylistsQuery.whereKey("contributors", equalTo: PFUser.current() as Any)
         
         let group = DispatchGroup()
         requestTimestamp = Date()
@@ -261,7 +271,6 @@ extension HomeViewController {
         }
         
         group.notify(queue: .main) {
-            print("Both tasks done!")
             self.stopAnimations()
             self.applySnapshot(animatingDifferences: animatingDifferences)
             self.requestTimestamp = nil
