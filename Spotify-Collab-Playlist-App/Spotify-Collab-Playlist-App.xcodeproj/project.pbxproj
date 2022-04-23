@@ -34,6 +34,7 @@
 		57BA775528138520005E44F0 /* TrackSearchResultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BA775428138520005E44F0 /* TrackSearchResultsController.swift */; };
 		57BA77572813885D005E44F0 /* TrackSearchResultsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BA77562813885D005E44F0 /* TrackSearchResultsCell.swift */; };
 		57BA775E2813AFB2005E44F0 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BA775D2813AFB2005E44F0 /* Secrets.swift */; };
+		57BA77602813C393005E44F0 /* GenreSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BA775F2813C393005E44F0 /* GenreSearchCell.swift */; };
 		6211C5FD2813502400D2112B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6211C5FC2813502400D2112B /* LoginViewController.swift */; };
 		6211C5FF2813567100D2112B /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6211C5FE2813567100D2112B /* SignupViewController.swift */; };
 		6285079328012D59006D6A23 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6285079228012D59006D6A23 /* HomeViewController.swift */; };
@@ -94,6 +95,7 @@
 		57BA775428138520005E44F0 /* TrackSearchResultsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackSearchResultsController.swift; sourceTree = "<group>"; };
 		57BA77562813885D005E44F0 /* TrackSearchResultsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackSearchResultsCell.swift; sourceTree = "<group>"; };
 		57BA775D2813AFB2005E44F0 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
+		57BA775F2813C393005E44F0 /* GenreSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreSearchCell.swift; sourceTree = "<group>"; };
 		59CB026F2C59406F47E4BD6A /* Pods-Spotify-Collab-Playlist-AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spotify-Collab-Playlist-AppTests.release.xcconfig"; path = "Target Support Files/Pods-Spotify-Collab-Playlist-AppTests/Pods-Spotify-Collab-Playlist-AppTests.release.xcconfig"; sourceTree = "<group>"; };
 		6211C5FC2813502400D2112B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6211C5FE2813567100D2112B /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 				57BA77562813885D005E44F0 /* TrackSearchResultsCell.swift */,
 				6211C5FC2813502400D2112B /* LoginViewController.swift */,
 				6211C5FE2813567100D2112B /* SignupViewController.swift */,
+				57BA775F2813C393005E44F0 /* GenreSearchCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -535,6 +538,7 @@
 				57BA773C280935EA005E44F0 /* UICollectionReusableView+ReuseIdentifier.swift in Sources */,
 				6285079728012EA9006D6A23 /* ProfileViewController.swift in Sources */,
 				6285079528012E7D006D6A23 /* SearchViewController.swift in Sources */,
+				57BA77602813C393005E44F0 /* GenreSearchCell.swift in Sources */,
 				6285079328012D59006D6A23 /* HomeViewController.swift in Sources */,
 				57BA77572813885D005E44F0 /* TrackSearchResultsCell.swift in Sources */,
 				57BA77302808BA2E005E44F0 /* Playlist.swift in Sources */,
