@@ -1,6 +1,0 @@
-framework module Pods_Spotify_Collab_Playlist_App {
-  umbrella header "Pods-Spotify-Collab-Playlist-App-umbrella.h"
-
-  export *
-  module * { export * }
-}

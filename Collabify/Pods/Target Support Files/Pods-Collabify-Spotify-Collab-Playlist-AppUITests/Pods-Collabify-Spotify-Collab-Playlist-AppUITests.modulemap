@@ -1,0 +1,6 @@
+framework module Pods_Collabify_Spotify_Collab_Playlist_AppUITests {
+  umbrella header "Pods-Collabify-Spotify-Collab-Playlist-AppUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
